@@ -61,6 +61,10 @@
 	
 	var _AwesomeComponent2 = _interopRequireDefault(_AwesomeComponent);
 	
+	var _PictureOfMe = __webpack_require__(/*! ./PictureOfMe.jsx */ 184);
+	
+	var _PictureOfMe2 = _interopRequireDefault(_PictureOfMe);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -89,6 +93,7 @@
 	                    null,
 	                    ' Hello React!'
 	                ),
+	                _react2.default.createElement(_PictureOfMe2.default, null),
 	                _react2.default.createElement(_AwesomeComponent2.default, null)
 	            );
 	        }
@@ -22451,6 +22456,27 @@
 	}(_react2.default.Component);
 	
 	exports.default = AwesomeComponent;
+
+/***/ },
+/* 184 */
+/*!****************************************!*\
+  !*** ./src/client/app/PictureOfMe.jsx ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var MyFace = React.createClass({
+	    displayName: "MyFace",
+	
+	    render: function render() {
+	        return React.createElement("img", { src: "https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/14641954_10209046591619738_2791904295687670610_n.jpg?oh=ece116ca77cef99644b8953e6b4bb7b9&oe=58F0439C" });
+	    }
+	});
+	
+	module.exports = MyFace;
 
 /***/ }
 /******/ ]);
