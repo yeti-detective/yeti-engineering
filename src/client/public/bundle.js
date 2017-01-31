@@ -57,13 +57,13 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _AwesomeComponent = __webpack_require__(/*! ./AwesomeComponent.jsx */ 183);
-	
-	var _AwesomeComponent2 = _interopRequireDefault(_AwesomeComponent);
-	
 	var _PictureOfMe = __webpack_require__(/*! ./PictureOfMe.jsx */ 184);
 	
 	var _PictureOfMe2 = _interopRequireDefault(_PictureOfMe);
+	
+	var _LikeButton = __webpack_require__(/*! ./LikeButton.jsx */ 185);
+	
+	var _LikeButton2 = _interopRequireDefault(_LikeButton);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -72,6 +72,16 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	// import AwesomeComponent from './AwesomeComponent.jsx';
+	
+	
+	var style = {
+	    width: '80%',
+	    backgroundColor: '#625292',
+	    margin: 'auto',
+	    padding: 4
+	};
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -87,14 +97,14 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { style: style },
 	                _react2.default.createElement(
-	                    'p',
+	                    'h1',
 	                    null,
-	                    ' Hello React!'
+	                    'Christopher Brown'
 	                ),
 	                _react2.default.createElement(_PictureOfMe2.default, null),
-	                _react2.default.createElement(_AwesomeComponent2.default, null)
+	                _react2.default.createElement(_LikeButton2.default, null)
 	            );
 	        }
 	    }]);
@@ -22382,19 +22392,40 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../webpack/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
-/* 183 */
-/*!*********************************************!*\
-  !*** ./src/client/app/AwesomeComponent.jsx ***!
-  \*********************************************/
+/* 183 */,
+/* 184 */
+/*!****************************************!*\
+  !*** ./src/client/app/PictureOfMe.jsx ***!
+  \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var style = {
+	    borderRadius: '50%'
+	};
+	
+	var MyFace = React.createClass({
+	    displayName: 'MyFace',
+	
+	
+	    render: function render() {
+	        return React.createElement('img', { style: style, src: 'https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/14641954_10209046591619738_2791904295687670610_n.jpg?oh=ece116ca77cef99644b8953e6b4bb7b9&oe=58F0439C' });
+	    }
 	});
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	module.exports = MyFace;
+
+/***/ },
+/* 185 */
+/*!***************************************!*\
+  !*** ./src/client/app/LikeButton.jsx ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
 	
 	var _react = __webpack_require__(/*! react */ 1);
 	
@@ -22402,81 +22433,58 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	var likes = __webpack_require__(/*! ../public/likes.js */ 186);
 	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	var style = {
+	    border: 'solid #14073B',
+	    backgroundColor: '#271758',
+	    borderRadius: 10,
+	    color: '#887BAF'
+	};
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var LikeButton = _react2.default.createClass({
+	    displayName: 'LikeButton',
 	
-	var AwesomeComponent = function (_React$Component) {
-	    _inherits(AwesomeComponent, _React$Component);
-	
-	    function AwesomeComponent(props) {
-	        _classCallCheck(this, AwesomeComponent);
-	
-	        var _this = _possibleConstructorReturn(this, (AwesomeComponent.__proto__ || Object.getPrototypeOf(AwesomeComponent)).call(this, props));
-	
-	        _this.state = { likesCount: 0 };
-	        _this.onLike = _this.onLike.bind(_this);
-	        return _this;
-	    }
-	
-	    _createClass(AwesomeComponent, [{
-	        key: 'onLike',
-	        value: function onLike() {
-	            var newLikesCount = this.state.likesCount + 1;
-	            this.setState({ likesCount: newLikesCount });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
+	    getInitialState: function getInitialState() {
+	        var cliLikes = likes.howMany;
+	        return { likesCount: cliLikes };
+	    },
+	    onLike: function onLike() {
+	        this.setState({ likesCount: this.state.cliLikes + 1 });
+	    },
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'form',
+	            { method: 'POST' },
+	            'Likes : ',
+	            _react2.default.createElement(
+	                'span',
+	                null,
+	                this.state.likesCount
+	            ),
+	            _react2.default.createElement(
 	                'div',
 	                null,
-	                'Likes : ',
 	                _react2.default.createElement(
-	                    'span',
-	                    null,
-	                    this.state.likesCount
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    null,
-	                    _react2.default.createElement(
-	                        'button',
-	                        { onClick: this.onLike },
-	                        'Like Me'
-	                    )
+	                    'button',
+	                    { type: 'submit', onClick: this.onLike },
+	                    'Like Me'
 	                )
-	            );
-	        }
-	    }]);
-	
-	    return AwesomeComponent;
-	}(_react2.default.Component);
-	
-	exports.default = AwesomeComponent;
-
-/***/ },
-/* 184 */
-/*!****************************************!*\
-  !*** ./src/client/app/PictureOfMe.jsx ***!
-  \****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var React = __webpack_require__(/*! react */ 1);
-	
-	var MyFace = React.createClass({
-	    displayName: "MyFace",
-	
-	    render: function render() {
-	        return React.createElement("img", { src: "https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/14641954_10209046591619738_2791904295687670610_n.jpg?oh=ece116ca77cef99644b8953e6b4bb7b9&oe=58F0439C" });
+	            )
+	        );
 	    }
 	});
 	
-	module.exports = MyFace;
+	module.exports = LikeButton;
+
+/***/ },
+/* 186 */
+/*!************************************!*\
+  !*** ./src/client/public/likes.js ***!
+  \************************************/
+/***/ function(module, exports) {
+
+	module.exports = ({"howMany":29});
 
 /***/ }
 /******/ ]);
