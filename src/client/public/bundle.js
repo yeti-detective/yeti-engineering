@@ -57,11 +57,11 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _PictureOfMe = __webpack_require__(/*! ./PictureOfMe.jsx */ 184);
+	var _PictureOfMe = __webpack_require__(/*! ./PictureOfMe.jsx */ 183);
 	
 	var _PictureOfMe2 = _interopRequireDefault(_PictureOfMe);
 	
-	var _LikeButton = __webpack_require__(/*! ./LikeButton.jsx */ 185);
+	var _LikeButton = __webpack_require__(/*! ./LikeButton.jsx */ 184);
 	
 	var _LikeButton2 = _interopRequireDefault(_LikeButton);
 	
@@ -22392,8 +22392,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../webpack/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
-/* 183 */,
-/* 184 */
+/* 183 */
 /*!****************************************!*\
   !*** ./src/client/app/PictureOfMe.jsx ***!
   \****************************************/
@@ -22419,7 +22418,7 @@
 	module.exports = MyFace;
 
 /***/ },
-/* 185 */
+/* 184 */
 /*!***************************************!*\
   !*** ./src/client/app/LikeButton.jsx ***!
   \***************************************/
@@ -22433,7 +22432,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var likes = __webpack_require__(/*! ../public/likes.js */ 186);
+	var likes = __webpack_require__(/*! ../public/likes.js */ 185);
 	
 	var style = {
 	    border: 'solid #14073B',
@@ -22446,11 +22445,12 @@
 	    displayName: 'LikeButton',
 	
 	    getInitialState: function getInitialState() {
-	        var cliLikes = likes.howMany;
+	        var cliLikes = parseInt(likes.howMany);
 	        return { likesCount: cliLikes };
 	    },
 	    onLike: function onLike() {
-	        this.setState({ likesCount: this.state.cliLikes + 1 });
+	        var newLikesCount = this.state.likesCount + 1;
+	        this.setState({ likesCount: newLikesCount });
 	    },
 	    render: function render() {
 	        return _react2.default.createElement(
@@ -22467,7 +22467,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    'button',
-	                    { type: 'submit', onClick: this.onLike },
+	                    { style: style, type: 'submit', onClick: this.onLike },
 	                    'Like Me'
 	                )
 	            )
@@ -22478,13 +22478,13 @@
 	module.exports = LikeButton;
 
 /***/ },
-/* 186 */
+/* 185 */
 /*!************************************!*\
   !*** ./src/client/public/likes.js ***!
   \************************************/
 /***/ function(module, exports) {
 
-	module.exports = ({"howMany":29});
+	module.exports = ({"howMany":56});
 
 /***/ }
 /******/ ]);

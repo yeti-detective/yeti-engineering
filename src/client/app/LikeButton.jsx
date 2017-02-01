@@ -6,21 +6,22 @@ var style = {
                 backgroundColor: '#271758',
                 borderRadius: 10,
                 color: '#887BAF'
-            }
+            };
 
 var LikeButton = React.createClass({
     getInitialState: function(){
-        var cliLikes = likes.howMany;
+        var cliLikes = parseInt(likes.howMany);
         return {likesCount: cliLikes};
     },
     onLike: function(){
-        this.setState({likesCount: this.state.cliLikes +1});
+        let newLikesCount = this.state.likesCount + 1;
+        this.setState({likesCount: newLikesCount});
     },
     render: function(){
         return(
         <form method="POST">
             Likes : <span>{this.state.likesCount}</span>
-            <div><button type="submit" onClick={this.onLike}>Like Me</button></div>
+            <div><button style={style} type="submit" onClick={this.onLike}>Like Me</button></div>
         </form>
         );
     }
