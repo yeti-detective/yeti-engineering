@@ -1,5 +1,5 @@
 {
-  "name": "react-hello-world",
+  "name": "react_resume",
   "version": "1.0.0",
   "description": "hello world app, server + client react",
   "main": "server.js",

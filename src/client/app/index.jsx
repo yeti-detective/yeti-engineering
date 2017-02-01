@@ -1,9 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
+require("font-awesome-webpack");
 
-// import AwesomeComponent from './AwesomeComponent.jsx';
 import MyFace from './PictureOfMe.jsx';
 import LikeButton from './LikeButton.jsx';
+import Explaining from './Explaining.jsx';
 
 var style = {
     width: '80%',
@@ -19,6 +20,7 @@ class App extends React.Component {
                 <h1>Christopher Brown</h1>
                 <MyFace />
                 <LikeButton />
+                <Explaining />
             </div>
         );
     }

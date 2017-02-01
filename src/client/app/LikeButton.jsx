@@ -14,15 +14,23 @@ var LikeButton = React.createClass({
         return {likesCount: cliLikes};
     },
     onLike: function(){
+        var xhttp = new XMLHttpRequest();
+        /* xhttp.onreadystatechange = ()=>{
+            if(this.readyState == 4 && this.status == 200) {
+                
+            }
+        }; */
+        xhttp.open("POST", "click", true);
+        xhttp.send();
         let newLikesCount = this.state.likesCount + 1;
         this.setState({likesCount: newLikesCount});
     },
     render: function(){
         return(
-        <form method="POST">
+        <div>
             Likes : <span>{this.state.likesCount}</span>
-            <div><button style={style} type="submit" onClick={this.onLike}>Like Me</button></div>
-        </form>
+            <div><button style={style} onClick={this.onLike}>Like Me</button></div>
+        </div>
         );
     }
 });

@@ -24,11 +24,12 @@ app.get('/likes', (req, res) =>{
 });
 
 // post likes to the hosted database
-app.post('/', (req, res) => {
+app.post('/click', (req, res) => {
     likes.howMany += 1;
     fs.writeFile('./src/client/public/likes.js', "module.exports = (" + JSON.stringify(likes) + ");", 'utf-8', (err, data)=>{
         if(err){throw err}
         console.log('likes updated: ' + JSON.stringify(likes));
+        res.json(likes);
     })
     // db.update({}, {$set:{'likes': likes}});
 });
