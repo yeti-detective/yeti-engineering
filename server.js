@@ -1,3 +1,5 @@
+var port = 8080; // 
+
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -47,6 +49,6 @@ mongo.connect('mongodb://liker:L1k3r@ds157278.mlab.com:57278/yetis_first_db', (e
 });
 */
 
-app.listen(8080, ()=>{
-    console.log('listening on 8080');
+app.listen(port, ()=>{
+    console.log('listening on ' + port);
     });

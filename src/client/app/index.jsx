@@ -1,6 +1,5 @@
 import React from 'react';
 import {render} from 'react-dom';
-require("font-awesome-webpack");
 
 import MyFace from './PictureOfMe.jsx';
 import LikeButton from './LikeButton.jsx';

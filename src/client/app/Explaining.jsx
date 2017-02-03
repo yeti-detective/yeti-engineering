@@ -1,5 +1,4 @@
 var React = require('react');
-require('font-awesome-webpack');
 
 var Explaining = React.createClass({
     render: function(){
