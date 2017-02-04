@@ -3,15 +3,19 @@ var React = require('react');
 var style = {
     width: "95%",
     height: 400,
-    backgroundColor: "#413075",
-    marginBottom: 10
+    backgroundColor: "#14073B",
+    marginBottom: 10,
+    display: "block",
+    margin: "auto"
 };
 
 var Screen = React.createClass({
     render: function(){
         return (
-            <div style={style} className="screen"></div>
-        )
+            <svg style={style} className="screen"></svg>
+        );
     }
     
-})
+});
+
+module.exports = Screen;

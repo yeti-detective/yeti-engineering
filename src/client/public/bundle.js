@@ -120,7 +120,8 @@
 	                _react2.default.createElement(_LikeButton2.default, null),
 	                _react2.default.createElement(_Explaining2.default, null),
 	                _react2.default.createElement(_Links2.default, null),
-	                _react2.default.createElement(_Bragging2.default, null)
+	                _react2.default.createElement(_Bragging2.default, null),
+	                _react2.default.createElement(_PlatformerHolder2.default, null)
 	            );
 	        }
 	    }]);
@@ -22739,18 +22740,22 @@
 	var style = {
 	    width: "95%",
 	    height: 400,
-	    backgroundColor: "#413075",
-	    marginBottom: 10
+	    backgroundColor: "#14073B",
+	    marginBottom: 10,
+	    display: "block",
+	    margin: "auto"
 	};
 	
 	var Screen = React.createClass({
 	    displayName: "Screen",
 	
 	    render: function render() {
-	        return React.createElement("div", { style: style, className: "screen" });
+	        return React.createElement("svg", { style: style, className: "screen" });
 	    }
 	
 	});
+	
+	module.exports = Screen;
 
 /***/ },
 /* 191 */
@@ -22763,22 +22768,39 @@
 	
 	var React = __webpack_require__(/*! react */ 1);
 	
+	var triangle = "4em solid transparent";
+	var hyp = "8em solid #413075";
+	
+	var style = {
+	    width: "100%",
+	    marginTop: 10
+	};
+	
 	var left = {
-	    width: 25,
-	    height: 25,
-	    backgroundColor: "#413075"
+	    width: 0,
+	    height: 0,
+	    borderTop: triangle,
+	    borderBottom: triangle,
+	    borderRight: hyp,
+	    display: "inline-block"
 	};
 	
 	var right = {
-	    width: 25,
-	    height: 25,
-	    backgroundColor: "#413075"
+	    width: 0,
+	    height: 0,
+	    borderTop: triangle,
+	    borderBottom: triangle,
+	    borderLeft: hyp,
+	    display: "inline-block"
 	};
 	
 	var jump = {
-	    width: 25,
-	    height: 25,
-	    backgroundColor: "#413075"
+	    width: "8em",
+	    height: "8em",
+	    backgroundColor: "#413075",
+	    display: "inline-block",
+	    margin: "0px 20% 0px 20%",
+	    borderRadius: "50%"
 	};
 	
 	var Controller = React.createClass({
@@ -22787,13 +22809,15 @@
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            null,
+	            { style: style },
 	            React.createElement("div", { style: left, className: "leftBtn" }),
 	            React.createElement("div", { style: jump, classname: "jump" }),
 	            React.createElement("div", { style: right, className: "rightBtn" })
 	        );
 	    }
 	});
+	
+	module.exports = Controller;
 
 /***/ }
 /******/ ]);
