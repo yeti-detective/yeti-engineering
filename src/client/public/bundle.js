@@ -73,6 +73,14 @@
 	
 	var _Links2 = _interopRequireDefault(_Links);
 	
+	var _Bragging = __webpack_require__(/*! ./Bragging.jsx */ 188);
+	
+	var _Bragging2 = _interopRequireDefault(_Bragging);
+	
+	var _PlatformerHolder = __webpack_require__(/*! ./PlatformerHolder.jsx */ 189);
+	
+	var _PlatformerHolder2 = _interopRequireDefault(_PlatformerHolder);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -111,7 +119,8 @@
 	                _react2.default.createElement(_PictureOfMe2.default, null),
 	                _react2.default.createElement(_LikeButton2.default, null),
 	                _react2.default.createElement(_Explaining2.default, null),
-	                _react2.default.createElement(_Links2.default, null)
+	                _react2.default.createElement(_Links2.default, null),
+	                _react2.default.createElement(_Bragging2.default, null)
 	            );
 	        }
 	    }]);
@@ -22418,7 +22427,7 @@
 	
 	
 	    render: function render() {
-	        return React.createElement('img', { style: style, src: 'https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/14641954_10209046591619738_2791904295687670610_n.jpg?oh=ece116ca77cef99644b8953e6b4bb7b9&oe=58F0439C' });
+	        return React.createElement('img', { style: style, alt: 'photo of a handsome man', src: 'https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/14641954_10209046591619738_2791904295687670610_n.jpg?oh=ece116ca77cef99644b8953e6b4bb7b9&oe=58F0439C' });
 	    }
 	});
 	
@@ -22612,6 +22621,11 @@
 	                    "a",
 	                    { href: "https://www.linkedin.com/in/xchristopherxbrown" },
 	                    _react2.default.createElement("i", { className: "fa fa-lg fa-linkedin", style: style })
+	                ),
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: "mailto:christopher.michael.brown@gmail.com" },
+	                    _react2.default.createElement("i", { className: "fa fa-lg fa-envelope", style: style })
 	                )
 	            );
 	        }
@@ -22621,6 +22635,165 @@
 	}(_react2.default.Component);
 	
 	module.exports = Links;
+
+/***/ },
+/* 188 */
+/*!*************************************!*\
+  !*** ./src/client/app/Bragging.jsx ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var style = {
+	    textDecoration: "none",
+	    color: '#887BAF'
+	};
+	
+	var Bragging = React.createClass({
+	    displayName: 'Bragging',
+	
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'p',
+	                null,
+	                'So if your team needs someone who is good with JavaScript, React, and Node, by all means ',
+	                React.createElement(
+	                    'strong',
+	                    null,
+	                    React.createElement(
+	                        'a',
+	                        { style: style, href: 'tel:8166592363' },
+	                        'give me a call.'
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                'What\'s that? This resume is alright, but you want to see something functional?'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                'Ok, how about a little platformer?'
+	            )
+	        );
+	    }
+	});
+	
+	module.exports = Bragging;
+
+/***/ },
+/* 189 */
+/*!*********************************************!*\
+  !*** ./src/client/app/PlatformerHolder.jsx ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(/*! react */ 1);
+	var Screen = __webpack_require__(/*! ./minigame/Screen.jsx */ 190);
+	var Controller = __webpack_require__(/*! ./minigame/Controller.jsx */ 191);
+	
+	var PlatformerHolder = React.createClass({
+	    displayName: 'PlatformerHolder',
+	
+	    getInitialState: function getInitialState() {
+	        return {
+	            xPos: "45%",
+	            yPos: "400px"
+	        };
+	    },
+	    render: function render() {
+	        console.log(this.state.xPos);
+	        console.log(this.state.yPos);
+	        return React.createElement(
+	            'div',
+	            { className: 'holder' },
+	            React.createElement(Screen, null),
+	            React.createElement(Controller, null)
+	        );
+	    }
+	});
+	
+	module.exports = PlatformerHolder;
+
+/***/ },
+/* 190 */
+/*!********************************************!*\
+  !*** ./src/client/app/minigame/Screen.jsx ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var style = {
+	    width: "95%",
+	    height: 400,
+	    backgroundColor: "#413075",
+	    marginBottom: 10
+	};
+	
+	var Screen = React.createClass({
+	    displayName: "Screen",
+	
+	    render: function render() {
+	        return React.createElement("div", { style: style, className: "screen" });
+	    }
+	
+	});
+
+/***/ },
+/* 191 */
+/*!************************************************!*\
+  !*** ./src/client/app/minigame/Controller.jsx ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var left = {
+	    width: 25,
+	    height: 25,
+	    backgroundColor: "#413075"
+	};
+	
+	var right = {
+	    width: 25,
+	    height: 25,
+	    backgroundColor: "#413075"
+	};
+	
+	var jump = {
+	    width: 25,
+	    height: 25,
+	    backgroundColor: "#413075"
+	};
+	
+	var Controller = React.createClass({
+	    displayName: "Controller",
+	
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            null,
+	            React.createElement("div", { style: left, className: "leftBtn" }),
+	            React.createElement("div", { style: jump, classname: "jump" }),
+	            React.createElement("div", { style: right, className: "rightBtn" })
+	        );
+	    }
+	});
 
 /***/ }
 /******/ ]);

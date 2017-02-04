@@ -5,6 +5,8 @@ import MyFace from './PictureOfMe.jsx';
 import LikeButton from './LikeButton.jsx';
 import Explaining from './Explaining.jsx';
 import Links from './Links.jsx';
+import Bragging from './Bragging.jsx';
+import PlatformerHolder from './PlatformerHolder.jsx'
 
 var style = {
     width: '80%',
@@ -22,6 +24,7 @@ class App extends React.Component {
                 <LikeButton />
                 <Explaining />
                 <Links />
+                <Bragging />
             </div>
         );
     }
