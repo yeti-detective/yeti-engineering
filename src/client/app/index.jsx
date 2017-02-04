@@ -4,6 +4,7 @@ import {render} from 'react-dom';
 import MyFace from './PictureOfMe.jsx';
 import LikeButton from './LikeButton.jsx';
 import Explaining from './Explaining.jsx';
+import Links from './Links.jsx';
 
 var style = {
     width: '80%',
@@ -20,6 +21,7 @@ class App extends React.Component {
                 <MyFace />
                 <LikeButton />
                 <Explaining />
+                <Links />
             </div>
         );
     }
