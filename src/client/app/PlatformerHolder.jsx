@@ -14,7 +14,7 @@ var PlatformerHolder = React.createClass({
         console.log(this.state.yPos);
         return (
             <div className="holder">
-                <Screen />
+                <Screen xpos={this.state.xPos} ypos={this.state.yPos} />
                 <Controller />
             </div>
         );

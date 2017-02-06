@@ -1,5 +1,7 @@
 var React = require('react');
 
+var recFill = "#625292";
+
 var style = {
     width: "95%",
     height: 400,
@@ -12,7 +14,9 @@ var style = {
 var Screen = React.createClass({
     render: function(){
         return (
-            <svg style={style} className="screen"></svg>
+            <svg style={style} className="screen">
+                <rect x={this.props.xpos} y={this.props.ypos} height="25" width="20" />
+            </svg>
         );
     }
     

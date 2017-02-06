@@ -22718,7 +22718,7 @@
 	        return React.createElement(
 	            'div',
 	            { className: 'holder' },
-	            React.createElement(Screen, null),
+	            React.createElement(Screen, { xpos: this.state.xPos, ypos: this.state.yPos }),
 	            React.createElement(Controller, null)
 	        );
 	    }
@@ -22737,6 +22737,8 @@
 	
 	var React = __webpack_require__(/*! react */ 1);
 	
+	var recFill = "#625292";
+	
 	var style = {
 	    width: "95%",
 	    height: 400,
@@ -22750,7 +22752,11 @@
 	    displayName: "Screen",
 	
 	    render: function render() {
-	        return React.createElement("svg", { style: style, className: "screen" });
+	        return React.createElement(
+	            "svg",
+	            { style: style, className: "screen" },
+	            React.createElement("rect", { x: this.props.xpos, y: this.props.ypos, height: "25", width: "20" })
+	        );
 	    }
 	
 	});
