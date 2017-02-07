@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var triangle = "4em solid transparent";
 var hyp = "8em solid #413075";
@@ -35,17 +35,16 @@ var jump = {
     borderRadius: "50%"
 };
 
-var Controller = React.createClass({
-    render: function(){
-        return(
-            <div style={style}>
-                <div style={left} className="leftBtn"></div>
-                <div style={jump} classname="jump"></div>
-                <div style={right} className="rightBtn"></div>
-            </div>
-                
-        );
-    }
-});
+function Controller(props){
+
+    return(
+        <div style={style}>
+            <div style={left} onClick={props.left}></div>
+            <div style={jump} onClick={props.jump} ></div>
+            <div style={right} onClick={props.right}></div>
+        </div>
+            
+    );
+}
 
 module.exports = Controller;

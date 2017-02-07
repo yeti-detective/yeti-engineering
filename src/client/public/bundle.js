@@ -81,6 +81,10 @@
 	
 	var _PlatformerHolder2 = _interopRequireDefault(_PlatformerHolder);
 	
+	var _Navbar = __webpack_require__(/*! ./Navbar.jsx */ 192);
+	
+	var _Navbar2 = _interopRequireDefault(_Navbar);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -111,11 +115,7 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { style: style },
-	                _react2.default.createElement(
-	                    'h1',
-	                    null,
-	                    'Christopher Brown'
-	                ),
+	                _react2.default.createElement(_Navbar2.default, null),
 	                _react2.default.createElement(_PictureOfMe2.default, null),
 	                _react2.default.createElement(_LikeButton2.default, null),
 	                _react2.default.createElement(_Explaining2.default, null),
@@ -22420,7 +22420,8 @@
 	var React = __webpack_require__(/*! react */ 1);
 	
 	var style = {
-	    borderRadius: '50%'
+	    borderRadius: '50%',
+	    marginTop: 60
 	};
 	
 	var MyFace = React.createClass({
@@ -22605,27 +22606,27 @@
 	                null,
 	                _react2.default.createElement(
 	                    "a",
-	                    { href: "https://codepen.io/Yeti_Detective" },
+	                    { href: "https://codepen.io/Yeti_Detective", target: "_blank" },
 	                    _react2.default.createElement("i", { className: "fa fa-lg fa-codepen", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
-	                    { href: "https://www.freecodecamp.com/yeti-detective/front-end-certification" },
+	                    { href: "https://www.freecodecamp.com/yeti-detective/front-end-certification", target: "_blank" },
 	                    _react2.default.createElement("i", { className: "fa fa-lg fa-free-code-camp", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
-	                    { href: "https://github.com/yeti-detective" },
+	                    { href: "https://github.com/yeti-detective", target: "_blank" },
 	                    _react2.default.createElement("i", { className: "fa fa-lg fa-github", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
-	                    { href: "https://www.linkedin.com/in/xchristopherxbrown" },
+	                    { href: "https://www.linkedin.com/in/xchristopherxbrown", target: "_blank" },
 	                    _react2.default.createElement("i", { className: "fa fa-lg fa-linkedin", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
-	                    { href: "mailto:christopher.michael.brown@gmail.com" },
+	                    { href: "mailto:christopher.michael.brown@gmail.com", target: "_blank" },
 	                    _react2.default.createElement("i", { className: "fa fa-lg fa-envelope", style: style })
 	                )
 	            );
@@ -22699,30 +22700,102 @@
 
 	'use strict';
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
 	var React = __webpack_require__(/*! react */ 1);
 	var Screen = __webpack_require__(/*! ./minigame/Screen.jsx */ 190);
 	var Controller = __webpack_require__(/*! ./minigame/Controller.jsx */ 191);
 	
-	var PlatformerHolder = React.createClass({
-	    displayName: 'PlatformerHolder',
+	var PlatformerHolder = function (_React$Component) {
+	    _inherits(PlatformerHolder, _React$Component);
 	
-	    getInitialState: function getInitialState() {
-	        return {
-	            xPos: "45%",
-	            yPos: "400px"
+	    function PlatformerHolder() {
+	        _classCallCheck(this, PlatformerHolder);
+	
+	        var _this = _possibleConstructorReturn(this, (PlatformerHolder.__proto__ || Object.getPrototypeOf(PlatformerHolder)).call(this));
+	
+	        _this.state = {
+	            x: 100,
+	            y: 370,
+	            vel: 0,
+	            velJ: 0
 	        };
-	    },
-	    render: function render() {
-	        console.log(this.state.xPos);
-	        console.log(this.state.yPos);
-	        return React.createElement(
-	            'div',
-	            { className: 'holder' },
-	            React.createElement(Screen, { xpos: this.state.xPos, ypos: this.state.yPos }),
-	            React.createElement(Controller, null)
-	        );
+	        _this.motionLeft = _this.motionLeft.bind(_this);
+	        _this.motionRight = _this.motionRight.bind(_this);
+	        _this.jump = _this.jump.bind(_this);
+	        _this.gameStart = _this.gameStart.bind(_this);
+	        return _this;
 	    }
-	});
+	
+	    _createClass(PlatformerHolder, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            this.gameStart();
+	        }
+	    }, {
+	        key: 'gameStart',
+	        value: function gameStart() {
+	            console.log("velocity = " + this.state.vel);
+	            console.log("jump = " + this.state.velJ);
+	
+	            // movement
+	            this.setState({ x: this.state.x + this.state.vel });
+	            this.setState({ y: this.state.y + this.state.velJ });
+	
+	            // gravity
+	            if (this.state.y < 371) {
+	                this.setState({ y: this.state.velJ + 3 });
+	            }
+	
+	            // entropy
+	            if (this.state.vel > 0) {
+	                this.setState({ vel: this.state.vel - 1 });
+	            } else if (this.state.vel < 0) {
+	                this.setState({ vel: this.state.vel + 1 });
+	            }
+	
+	            if (this.state.velJ > 0) {
+	                this.setState({ velJ: this.state.velJ - 1 });
+	            }
+	
+	            // loop approx 60 fps
+	            setInterval(this.gameStart, 16);
+	        }
+	    }, {
+	        key: 'motionLeft',
+	        value: function motionLeft() {
+	            this.setState({ vel: this.state.vel - 5 });
+	        }
+	    }, {
+	        key: 'motionRight',
+	        value: function motionRight() {
+	            this.setState({ vel: this.state.vel + 5 });
+	        }
+	    }, {
+	        key: 'jump',
+	        value: function jump() {
+	            this.setState({ velJ: this.state.velJ + 5 });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'holder' },
+	                React.createElement(Screen, { xpos: this.state.x, ypos: this.state.y }),
+	                React.createElement(Controller, { left: this.motionLeft, right: this.motionRight, jump: this.jump })
+	            );
+	        }
+	    }]);
+	
+	    return PlatformerHolder;
+	}(React.Component);
 	
 	module.exports = PlatformerHolder;
 
@@ -22748,18 +22821,14 @@
 	    margin: "auto"
 	};
 	
-	var Screen = React.createClass({
-	    displayName: "Screen",
-	
-	    render: function render() {
-	        return React.createElement(
-	            "svg",
-	            { style: style, className: "screen" },
-	            React.createElement("rect", { x: this.props.xpos, y: this.props.ypos, height: "25", width: "20" })
-	        );
-	    }
-	
-	});
+	function Screen(props) {
+	    return React.createElement(
+	        "svg",
+	        { style: style, className: "screen" },
+	        React.createElement("rect", { x: props.xpos, y: props.ypos, fill: recFill, height: "25", width: "20" }),
+	        React.createElement("rect", { x: "40%", y: "370", fill: "#625292", height: "30", width: "50" })
+	    );
+	}
 	
 	module.exports = Screen;
 
@@ -22772,7 +22841,11 @@
 
 	"use strict";
 	
-	var React = __webpack_require__(/*! react */ 1);
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var triangle = "4em solid transparent";
 	var hyp = "8em solid #413075";
@@ -22809,21 +22882,92 @@
 	    borderRadius: "50%"
 	};
 	
-	var Controller = React.createClass({
-	    displayName: "Controller",
+	function Controller(props) {
 	
-	    render: function render() {
-	        return React.createElement(
-	            "div",
-	            { style: style },
-	            React.createElement("div", { style: left, className: "leftBtn" }),
-	            React.createElement("div", { style: jump, classname: "jump" }),
-	            React.createElement("div", { style: right, className: "rightBtn" })
-	        );
-	    }
-	});
+	    return _react2.default.createElement(
+	        "div",
+	        { style: style },
+	        _react2.default.createElement("div", { style: left, onClick: props.left }),
+	        _react2.default.createElement("div", { style: jump, onClick: props.jump }),
+	        _react2.default.createElement("div", { style: right, onClick: props.right })
+	    );
+	}
 	
 	module.exports = Controller;
+
+/***/ },
+/* 192 */
+/*!***********************************!*\
+  !*** ./src/client/app/Navbar.jsx ***!
+  \***********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var style = {
+	    backgroundColor: "#271758",
+	    width: "100%",
+	    margin: 0,
+	    padding: 0,
+	    overflow: "hidden",
+	    position: "fixed",
+	    top: 0,
+	    left: 0,
+	    textAlign: "left"
+	};
+	
+	var headers = {
+	    display: "inline-block",
+	    marginRight: "15%"
+	};
+	
+	var Navbar = function (_React$Component) {
+	    _inherits(Navbar, _React$Component);
+	
+	    function Navbar() {
+	        _classCallCheck(this, Navbar);
+	
+	        return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
+	    }
+	
+	    _createClass(Navbar, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { style: style },
+	                _react2.default.createElement(
+	                    "h2",
+	                    { style: headers },
+	                    "Christopher Brown"
+	                ),
+	                _react2.default.createElement(
+	                    "h3",
+	                    { style: headers },
+	                    "web developer"
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Navbar;
+	}(_react2.default.Component);
+	
+	module.exports = Navbar;
 
 /***/ }
 /******/ ]);

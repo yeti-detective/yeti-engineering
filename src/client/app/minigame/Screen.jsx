@@ -11,15 +11,13 @@ var style = {
     margin: "auto"
 };
 
-var Screen = React.createClass({
-    render: function(){
-        return (
-            <svg style={style} className="screen">
-                <rect x={this.props.xpos} y={this.props.ypos} height="25" width="20" />
-            </svg>
-        );
-    }
-    
-});
+function Screen(props){
+    return (
+        <svg style={style} className="screen">
+            <rect x={props.xpos} y={props.ypos} fill={recFill} height="25" width="20" />
+            <rect x="40%" y="370" fill="#625292" height="30" width="50" />
+        </svg>
+    );
+}
 
 module.exports = Screen;

@@ -7,6 +7,7 @@ import Explaining from './Explaining.jsx';
 import Links from './Links.jsx';
 import Bragging from './Bragging.jsx';
 import PlatformerHolder from './PlatformerHolder.jsx';
+import Navbar from './Navbar.jsx';
 
 var style = {
     width: '80%',
@@ -19,7 +20,7 @@ class App extends React.Component {
     render() {
         return (
             <div style={style}>
-                <h1>Christopher Brown</h1>
+                <Navbar />
                 <MyFace />
                 <LikeButton />
                 <Explaining />
