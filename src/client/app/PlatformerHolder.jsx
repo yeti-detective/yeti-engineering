@@ -10,17 +10,22 @@ class PlatformerHolder extends React.Component {
       y: 370,
       vel: 0,
       velJ: 0,
-      secondCount: 0
+      svgWidth: 0
     };
     this.motionLeft = this.motionLeft.bind(this);
     this.motionRight = this.motionRight.bind(this);
     this.jump = this.jump.bind(this);
     this.gameStart = this.gameStart.bind(this);
     this.gameRun = this.gameRun.bind(this);
+    this.getSvgWidth = this.getSvgWidth.bind(this);
   }
     
     componentDidMount(){
         this.gameStart();
+    }
+    
+    getSvgWidth(node) {
+        console.log(node);
     }
     
     gameStart(){
@@ -31,8 +36,6 @@ class PlatformerHolder extends React.Component {
     gameRun(){
         // console.log("velocity = " + this.state.vel);
         // console.log("high = " + this.state.y);
-        this.setState({secondCount: this.state.secondCount + 1});
-        console.log(this.state.secondCount);
         
         
         // movement
@@ -45,6 +48,9 @@ class PlatformerHolder extends React.Component {
         }
         
         // entropy & obstacles
+        if(this.state.x < 0){ this.setState({x: this.state.x + 5, vel: 0 })}
+        
+        
         if(this.state.vel > 0){ this.setState({vel: this.state.vel - 1})} else
         if(this.state.vel < 0){ this.setState({vel: this.state.vel + 1})}
         

@@ -22729,13 +22729,14 @@
 	            y: 370,
 	            vel: 0,
 	            velJ: 0,
-	            secondCount: 0
+	            svgWidth: 0
 	        };
 	        _this.motionLeft = _this.motionLeft.bind(_this);
 	        _this.motionRight = _this.motionRight.bind(_this);
 	        _this.jump = _this.jump.bind(_this);
 	        _this.gameStart = _this.gameStart.bind(_this);
 	        _this.gameRun = _this.gameRun.bind(_this);
+	        _this.getSvgWidth = _this.getSvgWidth.bind(_this);
 	        return _this;
 	    }
 	
@@ -22743,6 +22744,11 @@
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
 	            this.gameStart();
+	        }
+	    }, {
+	        key: 'getSvgWidth',
+	        value: function getSvgWidth(node) {
+	            console.log(node);
 	        }
 	    }, {
 	        key: 'gameStart',
@@ -22755,8 +22761,7 @@
 	        value: function gameRun() {
 	            // console.log("velocity = " + this.state.vel);
 	            // console.log("high = " + this.state.y);
-	            this.setState({ secondCount: this.state.secondCount + 1 });
-	            console.log(this.state.secondCount);
+	
 	
 	            // movement
 	            this.setState({ x: this.state.x + this.state.vel });
@@ -22768,6 +22773,10 @@
 	            }
 	
 	            // entropy & obstacles
+	            if (this.state.x < 0) {
+	                this.setState({ x: this.state.x + 5, vel: 0 });
+	            }
+	
 	            if (this.state.vel > 0) {
 	                this.setState({ vel: this.state.vel - 1 });
 	            } else if (this.state.vel < 0) {
@@ -22825,11 +22834,19 @@
 
 	"use strict";
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var recFill = "#625292";
 	
@@ -22842,19 +22859,47 @@
 	    margin: "auto"
 	};
 	
-	function Screen(props) {
-	    return _react2.default.createElement(
-	        "svg",
-	        { style: style, className: "screen" },
-	        _react2.default.createElement("rect", { x: props.xpos, y: props.ypos, fill: recFill, height: "25", width: "20" }),
-	        _react2.default.createElement("rect", { x: "40%", y: "370", fill: "#625292", height: "30", width: "16%" }),
-	        _react2.default.createElement("rect", { x: "55%", y: "340", fill: "#625292", height: "60", width: "16%" }),
-	        _react2.default.createElement("rect", { x: "70%", y: "310", fill: "#625292", height: "90", width: "16%" }),
-	        _react2.default.createElement("rect", { x: "85%", y: "280", fill: "#625292", height: "120", width: "16%" }),
-	        _react2.default.createElement("rect", { x: "90%", y: "240", fill: "#625292", height: "40", width: "3" }),
-	        _react2.default.createElement("rect", { x: "88%", y: "242", fill: "#FF0000", height: "15", width: "30" })
-	    );
-	}
+	var Screen = function (_React$Component) {
+	    _inherits(Screen, _React$Component);
+	
+	    function Screen() {
+	        _classCallCheck(this, Screen);
+	
+	        var _this = _possibleConstructorReturn(this, (Screen.__proto__ || Object.getPrototypeOf(Screen)).call(this));
+	
+	        _this.state = {
+	            wdth: 0
+	        };
+	        return _this;
+	    }
+	
+	    _createClass(Screen, [{
+	        key: "shouldComponentUpdate",
+	        value: function shouldComponentUpdate() {
+	            if (this.refs.node.width.baseVal.value > 0) {
+	                this.setState({ wdth: this.refs.node.width.baseVal.value });
+	                return true;
+	            }
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "svg",
+	                { style: style, className: "screen", ref: "node" },
+	                _react2.default.createElement("rect", { x: this.props.xpos, y: this.props.ypos, fill: recFill, height: "25", width: "20" }),
+	                _react2.default.createElement("rect", { x: "40%", y: "370", fill: "#625292", height: "30", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "55%", y: "340", fill: "#625292", height: "60", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "70%", y: "310", fill: "#625292", height: "90", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "85%", y: "280", fill: "#625292", height: "120", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "90%", y: "240", fill: "#625292", height: "40", width: "3" }),
+	                _react2.default.createElement("rect", { x: "88%", y: "242", fill: "#FF0000", height: "15", width: "30" })
+	            );
+	        }
+	    }]);
+	
+	    return Screen;
+	}(_react2.default.Component);
 	
 	module.exports = Screen;
 

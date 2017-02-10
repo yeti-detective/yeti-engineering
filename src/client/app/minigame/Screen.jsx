@@ -11,10 +11,25 @@ var style = {
     margin: "auto"
 };
 
-function Screen(props){
-    return (
-        <svg style={style} className="screen">
-            <rect x={props.xpos} y={props.ypos} fill={recFill} height="25" width="20" />
+class Screen extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            wdth: 0
+        };
+    }
+    
+    shouldComponentUpdate(){
+        if(this.refs.node.width.baseVal.value > 0){
+            this.setState({ wdth: this.refs.node.width.baseVal.value });
+            return true;
+        }
+    }
+    
+    render(){
+        return (
+        <svg style={style} className="screen" ref="node">
+            <rect x={this.props.xpos} y={this.props.ypos} fill={recFill} height="25" width="20" />
             <rect x="40%" y="370" fill="#625292" height="30" width="16%" />
             <rect x="55%" y="340" fill="#625292" height="60" width="16%" />
             <rect x="70%" y="310" fill="#625292" height="90" width="16%" />
@@ -22,7 +37,7 @@ function Screen(props){
             <rect x="90%" y="240" fill="#625292" height="40" width="3" />
             <rect x="88%" y="242" fill="#FF0000" height="15" width="30" />
         </svg>
-    );
+    )}
 }
 
 module.exports = Screen;
