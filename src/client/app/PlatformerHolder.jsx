@@ -9,12 +9,14 @@ class PlatformerHolder extends React.Component {
       x: 100,
       y: 370,
       vel: 0,
-      velJ: 0
+      velJ: 0,
+      secondCount: 0
     };
     this.motionLeft = this.motionLeft.bind(this);
     this.motionRight = this.motionRight.bind(this);
     this.jump = this.jump.bind(this);
     this.gameStart = this.gameStart.bind(this);
+    this.gameRun = this.gameRun.bind(this);
   }
     
     componentDidMount(){
@@ -22,38 +24,48 @@ class PlatformerHolder extends React.Component {
     }
     
     gameStart(){
-        console.log("velocity = " + this.state.vel);
-        console.log("jump = " + this.state.velJ);
+        // loop approx 30 fps
+        setInterval(this.gameRun, 35);
+    }
+    
+    gameRun(){
+        // console.log("velocity = " + this.state.vel);
+        // console.log("high = " + this.state.y);
+        this.setState({secondCount: this.state.secondCount + 1});
+        console.log(this.state.secondCount);
+        
         
         // movement
         this.setState({x: this.state.x + this.state.vel});
-        this.setState({y: this.state.y + this.state.velJ});
+        this.setState({y: this.state.y - this.state.velJ});
         
         // gravity
         if(this.state.y < 371){
-            this.setState({y: this.state.velJ + 3});
+            this.setState({y: this.state.y - this.state.velJ});
         }
         
-        // entropy
+        // entropy & obstacles
         if(this.state.vel > 0){ this.setState({vel: this.state.vel - 1})} else
         if(this.state.vel < 0){ this.setState({vel: this.state.vel + 1})}
         
-        if(this.state.velJ > 0){ this.setState({velJ: this.state.velJ - 1}) }
+        if(this.state.y < 371){ this.setState({velJ: this.state.velJ - 1}) } else
+        {this.setState({velJ: 0})}
         
-        // loop approx 60 fps
-        setInterval(this.gameStart, 16);
+        // if(this.state.y > 344 && this.state.x > )
+        
+        this.gameStart;
     }
     
     motionLeft(){
-        this.setState({vel: this.state.vel - 5});
+        this.setState({vel: this.state.vel - 10});
     }
     
     motionRight(){
-        this.setState({vel: this.state.vel + 5});
+        this.setState({vel: this.state.vel + 10});
     }
     
     jump(){
-        this.setState({velJ: this.state.velJ + 5});
+        this.setState({velJ: this.state.velJ + 15});
     }
     
     render(){

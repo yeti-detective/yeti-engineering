@@ -22419,9 +22419,13 @@
 	
 	var React = __webpack_require__(/*! react */ 1);
 	
+	// new scarf picture is #191328
+	
 	var style = {
 	    borderRadius: '50%',
-	    marginTop: 60
+	    marginTop: 60,
+	    height: 200,
+	    width: 'auto'
 	};
 	
 	var MyFace = React.createClass({
@@ -22429,7 +22433,7 @@
 	
 	
 	    render: function render() {
-	        return React.createElement('img', { style: style, alt: 'photo of a handsome man', src: 'https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/14641954_10209046591619738_2791904295687670610_n.jpg?oh=ece116ca77cef99644b8953e6b4bb7b9&oe=58F0439C' });
+	        return React.createElement('img', { style: style, alt: 'photo of a handsome man', src: 'https://dl.dropbox.com/s/hubt7qg7bhjrq73/Dapper.jpg?dl=0' });
 	    }
 	});
 	
@@ -22724,12 +22728,14 @@
 	            x: 100,
 	            y: 370,
 	            vel: 0,
-	            velJ: 0
+	            velJ: 0,
+	            secondCount: 0
 	        };
 	        _this.motionLeft = _this.motionLeft.bind(_this);
 	        _this.motionRight = _this.motionRight.bind(_this);
 	        _this.jump = _this.jump.bind(_this);
 	        _this.gameStart = _this.gameStart.bind(_this);
+	        _this.gameRun = _this.gameRun.bind(_this);
 	        return _this;
 	    }
 	
@@ -22741,46 +22747,57 @@
 	    }, {
 	        key: 'gameStart',
 	        value: function gameStart() {
-	            console.log("velocity = " + this.state.vel);
-	            console.log("jump = " + this.state.velJ);
+	            // loop approx 30 fps
+	            setInterval(this.gameRun, 35);
+	        }
+	    }, {
+	        key: 'gameRun',
+	        value: function gameRun() {
+	            // console.log("velocity = " + this.state.vel);
+	            // console.log("high = " + this.state.y);
+	            this.setState({ secondCount: this.state.secondCount + 1 });
+	            console.log(this.state.secondCount);
 	
 	            // movement
 	            this.setState({ x: this.state.x + this.state.vel });
-	            this.setState({ y: this.state.y + this.state.velJ });
+	            this.setState({ y: this.state.y - this.state.velJ });
 	
 	            // gravity
 	            if (this.state.y < 371) {
-	                this.setState({ y: this.state.velJ + 3 });
+	                this.setState({ y: this.state.y - this.state.velJ });
 	            }
 	
-	            // entropy
+	            // entropy & obstacles
 	            if (this.state.vel > 0) {
 	                this.setState({ vel: this.state.vel - 1 });
 	            } else if (this.state.vel < 0) {
 	                this.setState({ vel: this.state.vel + 1 });
 	            }
 	
-	            if (this.state.velJ > 0) {
+	            if (this.state.y < 371) {
 	                this.setState({ velJ: this.state.velJ - 1 });
+	            } else {
+	                this.setState({ velJ: 0 });
 	            }
 	
-	            // loop approx 60 fps
-	            setInterval(this.gameStart, 16);
+	            // if(this.state.y > 344 && this.state.x > )
+	
+	            this.gameStart;
 	        }
 	    }, {
 	        key: 'motionLeft',
 	        value: function motionLeft() {
-	            this.setState({ vel: this.state.vel - 5 });
+	            this.setState({ vel: this.state.vel - 10 });
 	        }
 	    }, {
 	        key: 'motionRight',
 	        value: function motionRight() {
-	            this.setState({ vel: this.state.vel + 5 });
+	            this.setState({ vel: this.state.vel + 10 });
 	        }
 	    }, {
 	        key: 'jump',
 	        value: function jump() {
-	            this.setState({ velJ: this.state.velJ + 5 });
+	            this.setState({ velJ: this.state.velJ + 15 });
 	        }
 	    }, {
 	        key: 'render',
@@ -22808,7 +22825,11 @@
 
 	"use strict";
 	
-	var React = __webpack_require__(/*! react */ 1);
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var recFill = "#625292";
 	
@@ -22822,11 +22843,16 @@
 	};
 	
 	function Screen(props) {
-	    return React.createElement(
+	    return _react2.default.createElement(
 	        "svg",
 	        { style: style, className: "screen" },
-	        React.createElement("rect", { x: props.xpos, y: props.ypos, fill: recFill, height: "25", width: "20" }),
-	        React.createElement("rect", { x: "40%", y: "370", fill: "#625292", height: "30", width: "50" })
+	        _react2.default.createElement("rect", { x: props.xpos, y: props.ypos, fill: recFill, height: "25", width: "20" }),
+	        _react2.default.createElement("rect", { x: "40%", y: "370", fill: "#625292", height: "30", width: "16%" }),
+	        _react2.default.createElement("rect", { x: "55%", y: "340", fill: "#625292", height: "60", width: "16%" }),
+	        _react2.default.createElement("rect", { x: "70%", y: "310", fill: "#625292", height: "90", width: "16%" }),
+	        _react2.default.createElement("rect", { x: "85%", y: "280", fill: "#625292", height: "120", width: "16%" }),
+	        _react2.default.createElement("rect", { x: "90%", y: "240", fill: "#625292", height: "40", width: "3" }),
+	        _react2.default.createElement("rect", { x: "88%", y: "242", fill: "#FF0000", height: "15", width: "30" })
 	    );
 	}
 	
