@@ -10,7 +10,8 @@ class PlatformerHolder extends React.Component {
       y: 370,
       vel: 0,
       velJ: 0,
-      svgWidth: 0
+      svgWidth: 0,
+      canJump: true
     };
     this.motionLeft = this.motionLeft.bind(this);
     this.motionRight = this.motionRight.bind(this);
@@ -44,20 +45,75 @@ class PlatformerHolder extends React.Component {
         this.setState({y: this.state.y - this.state.velJ});
         
         // gravity
-        if(this.state.y < 371 && this.state.x < this.state.svgWidth * 0.4 - 20){
+        // first block
+        if(this.state.x > this.state.svgWidth * 0.4 - 19 && this.state.y > 371){
+            this.setState({vel: 0, x: this.state.x - 1});
+        }
+        if(this.state.x < this.state.svgWidth * 0.4 - 20 && this.state.y > 371 ){
+            this.setState({velJ: 0});
+            if(this.state.y > 371){
+                this.setState({y: this.state.y - 1 });
+            }
+            if(this.state.y > 372){
+                this.setState({canJump: true});
+            }else{
+                this.setState({canJump: false});
+            }
+        }
+        // second block
+        if(this.state.x > this.state.svgWidth * 0.55 - 19 && this.state.y > 341){
+            this.setState({vel: 0, x: this.state.x - 1});
+        }
+        if(this.state.x > this.state.svgWidth * 0.4 -20 && this.state.x < this.state.svgWidth * 0.55 -20 && this.state.y > 341){
+            this.setState({velJ: 0, canJump: true});
+            if(this.state.y > 341){
+                this.setState({y: this.state.y - 1});
+            }
+            if(this.state.y > 342){
+                this.setState({canJump: true});
+            }else{
+                this.setState({canJump: false});
+            }
+        }
+        // third block
+        if(this.state.x > this.state.svgWidth * 0.7 - 19 && this.state.y > 371){
+            this.setState({vel: 0, x: this.state.x - 1});
+        }
+        if(this.state.x > this.state.svgWidth * 0.55 -20 && this.state.x < this.state.svgWidth * 0.7 -20 && this.state.y > 371){
+            this.setState({velJ: 0, canJump: true});
+            if(this.state.y > 371){
+                this.setState({y: this.state.y - 1});
+            }
+            if(this.state.y > 372){
+                this.setState({canJump: true});
+            }else{
+                this.setState({canJump: false});
+            }
+        }
+        
+        /* if(this.state.y < 371 && this.state.x < this.state.svgWidth * 0.4 - 20){
             this.setState({y: this.state.y - this.state.velJ});
         }
+        if(this.state.y > 371){this.setState({y: this.state.y - 1 })} */
         
         // entropy & obstacles
         if(this.state.x < 0){ this.setState({x: this.state.x + 5, vel: 0 })}
-        if(this.state.x > (this.state.svgWidth * 0.4) - 20 && this.state.y > 345){this.setState({vel: 0, x: this.state.x - 5})}
+        if(this.state.x > (this.state.svgWidth * 0.4) - 20 && this.state.y > 345){
+            this.setState({vel: 0, x: this.state.x - 5})
+        }
         
         
-        if(this.state.vel > 0){ this.setState({vel: this.state.vel - 1})} else
-        if(this.state.vel < 0){ this.setState({vel: this.state.vel + 1})}
+        if(this.state.vel > 0){ this.setState({vel: this.state.vel - 1})}
+        else if(this.state.vel < 0){
+            this.setState({vel: this.state.vel + 1})
+        }
         
-        if(this.state.y < 371){ this.setState({velJ: this.state.velJ - 1}) } else
-        {this.setState({velJ: 0})}
+        if(this.state.y < 371){
+            this.setState({velJ: this.state.velJ - 1})
+        }
+        else{
+            this.setState({velJ: 0});
+        }
         
         // if(this.state.y > 344 && this.state.x > )
         
@@ -73,7 +129,7 @@ class PlatformerHolder extends React.Component {
     }
     
     jump(){
-        if(this.state.y > 370){
+        if(this.state.canJump){
             this.setState({velJ: this.state.velJ + 15});
         }
     }
