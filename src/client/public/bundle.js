@@ -22747,8 +22747,11 @@
 	        }
 	    }, {
 	        key: 'getSvgWidth',
-	        value: function getSvgWidth(node) {
-	            console.log(node);
+	        value: function getSvgWidth(wdth) {
+	            if (wdth != this.state.svgWidth) {
+	                this.setState({ svgWidth: wdth });
+	            }
+	            console.log(this.state.svgWidth);
 	        }
 	    }, {
 	        key: 'gameStart',
@@ -22768,13 +22771,16 @@
 	            this.setState({ y: this.state.y - this.state.velJ });
 	
 	            // gravity
-	            if (this.state.y < 371) {
+	            if (this.state.y < 371 && this.state.x < this.state.svgWidth * 0.4 - 20) {
 	                this.setState({ y: this.state.y - this.state.velJ });
 	            }
 	
 	            // entropy & obstacles
 	            if (this.state.x < 0) {
 	                this.setState({ x: this.state.x + 5, vel: 0 });
+	            }
+	            if (this.state.x > this.state.svgWidth * 0.4 - 20 && this.state.y > 345) {
+	                this.setState({ vel: 0, x: this.state.x - 5 });
 	            }
 	
 	            if (this.state.vel > 0) {
@@ -22806,7 +22812,9 @@
 	    }, {
 	        key: 'jump',
 	        value: function jump() {
-	            this.setState({ velJ: this.state.velJ + 15 });
+	            if (this.state.y > 370) {
+	                this.setState({ velJ: this.state.velJ + 15 });
+	            }
 	        }
 	    }, {
 	        key: 'render',
@@ -22814,7 +22822,7 @@
 	            return React.createElement(
 	                'div',
 	                { className: 'holder' },
-	                React.createElement(Screen, { xpos: this.state.x, ypos: this.state.y }),
+	                React.createElement(Screen, { xpos: this.state.x, ypos: this.state.y, getWdth: this.getSvgWidth }),
 	                React.createElement(Controller, { left: this.motionLeft, right: this.motionRight, jump: this.jump })
 	            );
 	        }
@@ -22878,6 +22886,7 @@
 	        value: function shouldComponentUpdate() {
 	            if (this.refs.node.width.baseVal.value > 0) {
 	                this.setState({ wdth: this.refs.node.width.baseVal.value });
+	                this.props.getWdth(this.state.wdth);
 	                return true;
 	            }
 	        }

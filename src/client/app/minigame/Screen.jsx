@@ -22,6 +22,7 @@ class Screen extends React.Component {
     shouldComponentUpdate(){
         if(this.refs.node.width.baseVal.value > 0){
             this.setState({ wdth: this.refs.node.width.baseVal.value });
+            this.props.getWdth(this.state.wdth);
             return true;
         }
     }
