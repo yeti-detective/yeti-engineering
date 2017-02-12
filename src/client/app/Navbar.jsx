@@ -1,7 +1,7 @@
 import React from 'react';
 
 var style = {
-    backgroundColor: "#271758",
+    backgroundColor: "#070A16",
     width: "100%",
     margin: 0,
     padding: 0,

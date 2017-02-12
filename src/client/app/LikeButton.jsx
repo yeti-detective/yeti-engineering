@@ -2,10 +2,10 @@ import React from 'react';
 var likes = require('../public/likes.js');
 
 var style = {
-                border: 'solid #14073B',
-                backgroundColor: '#271758',
+                border: 'solid #082156',
+                backgroundColor: '#070A16',
                 borderRadius: 10,
-                color: '#887BAF'
+                color: '#3F5A95'
             };
 
 var LikeButton = React.createClass({

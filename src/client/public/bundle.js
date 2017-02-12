@@ -57,6 +57,10 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
+	var _Navbar = __webpack_require__(/*! ./Navbar.jsx */ 192);
+	
+	var _Navbar2 = _interopRequireDefault(_Navbar);
+	
 	var _PictureOfMe = __webpack_require__(/*! ./PictureOfMe.jsx */ 183);
 	
 	var _PictureOfMe2 = _interopRequireDefault(_PictureOfMe);
@@ -81,9 +85,9 @@
 	
 	var _PlatformerHolder2 = _interopRequireDefault(_PlatformerHolder);
 	
-	var _Navbar = __webpack_require__(/*! ./Navbar.jsx */ 192);
+	var _WhatNext = __webpack_require__(/*! ./WhatNext.jsx */ 193);
 	
-	var _Navbar2 = _interopRequireDefault(_Navbar);
+	var _WhatNext2 = _interopRequireDefault(_WhatNext);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -95,7 +99,7 @@
 	
 	var style = {
 	    width: '80%',
-	    backgroundColor: '#625292',
+	    backgroundColor: '#161924',
 	    margin: 'auto',
 	    padding: 4
 	};
@@ -121,7 +125,8 @@
 	                _react2.default.createElement(_Explaining2.default, null),
 	                _react2.default.createElement(_Links2.default, null),
 	                _react2.default.createElement(_Bragging2.default, null),
-	                _react2.default.createElement(_PlatformerHolder2.default, null)
+	                _react2.default.createElement(_PlatformerHolder2.default, null),
+	                _react2.default.createElement(_WhatNext2.default, null)
 	            );
 	        }
 	    }]);
@@ -22457,10 +22462,10 @@
 	var likes = __webpack_require__(/*! ../public/likes.js */ 185);
 	
 	var style = {
-	    border: 'solid #14073B',
-	    backgroundColor: '#271758',
+	    border: 'solid #082156',
+	    backgroundColor: '#070A16',
 	    borderRadius: 10,
-	    color: '#887BAF'
+	    color: '#3F5A95'
 	};
 	
 	var LikeButton = _react2.default.createClass({
@@ -22514,7 +22519,7 @@
   \************************************/
 /***/ function(module, exports) {
 
-	module.exports = ({"howMany":66});
+	module.exports = ({"howMany":69});
 
 /***/ },
 /* 186 */
@@ -22584,7 +22589,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var style = {
-	    color: "#14073B",
+	    color: "#082156",
 	    margin: "5%",
 	    fontSize: "2.5em"
 	};
@@ -22655,7 +22660,7 @@
 	
 	var style = {
 	    textDecoration: "none",
-	    color: '#887BAF'
+	    color: '#3F5A95'
 	};
 	
 	var Bragging = React.createClass({
@@ -22682,7 +22687,7 @@
 	            React.createElement(
 	                'p',
 	                null,
-	                'What\'s that? This resume is alright, but you want to see something functional?'
+	                'What\'s that? This page is alright, but you want to see something functional?'
 	            ),
 	            React.createElement(
 	                'p',
@@ -22730,7 +22735,8 @@
 	            vel: 0,
 	            velJ: 0,
 	            svgWidth: 0,
-	            canJump: true
+	            canJump: true,
+	            win: false
 	        };
 	        _this.motionLeft = _this.motionLeft.bind(_this);
 	        _this.motionRight = _this.motionRight.bind(_this);
@@ -22752,7 +22758,6 @@
 	            if (wdth != this.state.svgWidth) {
 	                this.setState({ svgWidth: wdth });
 	            }
-	            console.log(this.state.svgWidth);
 	        }
 	    }, {
 	        key: 'gameStart',
@@ -22763,65 +22768,90 @@
 	    }, {
 	        key: 'gameRun',
 	        value: function gameRun() {
-	            // console.log("velocity = " + this.state.vel);
-	            // console.log("high = " + this.state.y);
-	
-	
 	            // movement
 	            this.setState({ x: this.state.x + this.state.vel });
 	            this.setState({ y: this.state.y - this.state.velJ });
 	
 	            // gravity
-	            // first block
-	            if (this.state.x > this.state.svgWidth * 0.4 - 19 && this.state.y > 371) {
-	                this.setState({ vel: 0, x: this.state.x - 1 });
+	            // ground level
+	            if (this.state.x < this.state.svgWidth * 0.4 - 20) {
+	                if (this.state.y > 370) {
+	                    this.setState({ velJ: 0, canJump: true });
+	                } else {
+	                    this.setState({ velJ: this.state.velJ - 1, canJump: false });
+	                }
+	                if (this.state.y > 375) {
+	                    this.setState({ y: this.state.y + 1 });
+	                }
 	            }
-	            if (this.state.x < this.state.svgWidth * 0.4 - 20 && this.state.y > 371) {
-	                this.setState({ velJ: 0 });
-	                if (this.state.y > 371) {
+	            // first boundary
+	            if (this.state.y > 318 && this.state.x > this.state.svgWidth * 0.4 - 23 && this.state.x < this.state.svgWidth * 0.4 - 5) {
+	                this.setState({ vel: 0, x: this.state.x - 5 });
+	            }
+	            // first level
+	            if (this.state.x > this.state.svgWidth * 0.4 - 20 && this.state.x < this.state.svgWidth * 0.55 - 20) {
+	                if (this.state.y > 337) {
+	                    this.setState({ velJ: 0, canJump: true });
+	                } else {
+	                    this.setState({ velJ: this.state.velJ - 1, canJump: false });
+	                }
+	                if (this.state.y > 345) {
 	                    this.setState({ y: this.state.y - 1 });
 	                }
-	                if (this.state.y > 372) {
-	                    this.setState({ canJump: true });
+	            }
+	            // second boundary
+	            if (this.state.y > 288 && this.state.x > this.state.svgWidth * 0.55 - 23 && this.state.x < this.state.svgWidth * 0.55 - 5) {
+	                this.setState({ vel: 0, x: this.state.x - 5 });
+	            }
+	            // second level
+	            if (this.state.x > this.state.svgWidth * 0.55 - 20 && this.state.x < this.state.svgWidth * 0.7 - 20) {
+	                if (this.state.y > 307) {
+	                    this.setState({ velJ: 0, canJump: true });
 	                } else {
-	                    this.setState({ canJump: false });
+	                    this.setState({ velJ: this.state.velJ - 1, canJump: false });
 	                }
-	            }
-	            // second block
-	            if (this.state.x > this.state.svgWidth * 0.55 - 19 && this.state.y > 341) {
-	                this.setState({ vel: 0, x: this.state.x - 1 });
-	            }
-	            if (this.state.x > this.state.svgWidth * 0.4 - 20 && this.state.x < this.state.svgWidth * 0.55 - 20 && this.state.y > 341) {
-	                this.setState({ velJ: 0, canJump: true });
-	                if (this.state.y > 341) {
+	                if (this.state.y > 315) {
 	                    this.setState({ y: this.state.y - 1 });
 	                }
-	                if (this.state.y > 342) {
-	                    this.setState({ canJump: true });
+	            }
+	            // third boundary
+	            if (this.state.y > 258 && this.state.x > this.state.svgWidth * 0.7 - 23 && this.state.x < this.state.svgWidth * 0.7 - 5) {
+	                this.setState({ vel: 0, x: this.state.x - 5 });
+	            }
+	            // third level
+	            if (this.state.x > this.state.svgWidth * 0.7 - 20 && this.state.x < this.state.svgWidth * 0.85 - 20) {
+	                if (this.state.y > 277) {
+	                    this.setState({ velJ: 0, canJump: true });
 	                } else {
-	                    this.setState({ canJump: false });
+	                    this.setState({ velJ: this.state.velJ - 1, canJump: false });
 	                }
-	            }
-	            // third block
-	            if (this.state.x > this.state.svgWidth * 0.7 - 19 && this.state.y > 371) {
-	                this.setState({ vel: 0, x: this.state.x - 1 });
-	            }
-	            if (this.state.x > this.state.svgWidth * 0.55 - 20 && this.state.x < this.state.svgWidth * 0.7 - 20 && this.state.y > 371) {
-	                this.setState({ velJ: 0, canJump: true });
-	                if (this.state.y > 371) {
+	                if (this.state.y > 285) {
 	                    this.setState({ y: this.state.y - 1 });
 	                }
-	                if (this.state.y > 372) {
-	                    this.setState({ canJump: true });
+	            }
+	            // fourth boundary
+	            if (this.state.y > 228 && this.state.x > this.state.svgWidth * 0.85 - 23 && this.state.x < this.state.svgWidth * 0.85 - 5) {
+	                this.setState({ vel: 0, x: this.state.x - 5 });
+	            }
+	            // fourth level
+	            if (this.state.x > this.state.svgWidth * 0.85 - 20) {
+	                if (this.state.y > 247) {
+	                    this.setState({ velJ: 0, canJump: true });
 	                } else {
-	                    this.setState({ canJump: false });
+	                    this.setState({ velJ: this.state.velJ - 1, canJump: false });
+	                }
+	                if (this.state.y > 255) {
+	                    this.setState({ y: this.state.y - 1 });
 	                }
 	            }
-	
-	            /* if(this.state.y < 371 && this.state.x < this.state.svgWidth * 0.4 - 20){
-	                this.setState({y: this.state.y - this.state.velJ});
+	            // fourth boundary
+	            if (this.state.x > this.state.svgWidth - 23) {
+	                this.setState({ vel: 0, x: this.state.x - 5 });
 	            }
-	            if(this.state.y > 371){this.setState({y: this.state.y - 1 })} */
+	            // win state
+	            if (this.state.x > this.state.svgWidth * 0.9 - 20 && this.state.x < this.state.svgWidth * 0.9 + 30 && this.state.y > 242 - 25 && this.state.y < 242 + 15 + 25) {
+	                this.setState({ win: true });
+	            }
 	
 	            // entropy & obstacles
 	            if (this.state.x < 0) {
@@ -22836,14 +22866,6 @@
 	            } else if (this.state.vel < 0) {
 	                this.setState({ vel: this.state.vel + 1 });
 	            }
-	
-	            if (this.state.y < 371) {
-	                this.setState({ velJ: this.state.velJ - 1 });
-	            } else {
-	                this.setState({ velJ: 0 });
-	            }
-	
-	            // if(this.state.y > 344 && this.state.x > )
 	
 	            this.gameStart;
 	        }
@@ -22870,7 +22892,7 @@
 	            return React.createElement(
 	                'div',
 	                { className: 'holder' },
-	                React.createElement(Screen, { xpos: this.state.x, ypos: this.state.y, getWdth: this.getSvgWidth }),
+	                React.createElement(Screen, { xpos: this.state.x, ypos: this.state.y, getWdth: this.getSvgWidth, win: this.state.win }),
 	                React.createElement(Controller, { left: this.motionLeft, right: this.motionRight, jump: this.jump })
 	            );
 	        }
@@ -22904,12 +22926,12 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var recFill = "#625292";
+	var recFill = "#161924";
 	
 	var style = {
 	    width: "95%",
 	    height: 400,
-	    backgroundColor: "#14073B",
+	    backgroundColor: "#082156",
 	    marginBottom: 10,
 	    display: "block",
 	    margin: "auto"
@@ -22941,16 +22963,32 @@
 	    }, {
 	        key: "render",
 	        value: function render() {
+	            if (this.props.win) {
+	                return _react2.default.createElement(
+	                    "div",
+	                    { style: style },
+	                    _react2.default.createElement(
+	                        "h1",
+	                        null,
+	                        "CONGRATULATIONS! YOU WON!"
+	                    ),
+	                    _react2.default.createElement(
+	                        "p",
+	                        null,
+	                        "You've won my respect"
+	                    )
+	                );
+	            }
 	            return _react2.default.createElement(
 	                "svg",
 	                { style: style, className: "screen", ref: "node" },
 	                _react2.default.createElement("rect", { x: this.props.xpos, y: this.props.ypos, fill: recFill, height: "25", width: "20" }),
-	                _react2.default.createElement("rect", { x: "40%", y: "370", fill: "#625292", height: "30", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "55%", y: "340", fill: "#625292", height: "60", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "70%", y: "310", fill: "#625292", height: "90", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "85%", y: "280", fill: "#625292", height: "120", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "90%", y: "240", fill: "#625292", height: "40", width: "3" }),
-	                _react2.default.createElement("rect", { x: "88%", y: "242", fill: "#FF0000", height: "15", width: "30" })
+	                _react2.default.createElement("rect", { x: "40%", y: "370", fill: "#161924", height: "30", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "55%", y: "340", fill: "#161924", height: "60", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "70%", y: "310", fill: "#161924", height: "90", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "85%", y: "280", fill: "#161924", height: "120", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "90%", y: "240", fill: "#161924", height: "40", width: "3" }),
+	                _react2.default.createElement("rect", { fill: "#FF0000", x: "90%", y: "242", height: "15", width: "30" })
 	            );
 	        }
 	    }]);
@@ -22976,7 +23014,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var triangle = "4em solid transparent";
-	var hyp = "8em solid #413075";
+	var hyp = "8em solid #15316D";
 	
 	var style = {
 	    width: "100%",
@@ -23004,7 +23042,7 @@
 	var jump = {
 	    width: "8em",
 	    height: "8em",
-	    backgroundColor: "#413075",
+	    backgroundColor: "#15316D",
 	    display: "inline-block",
 	    margin: "0px 20% 0px 20%",
 	    borderRadius: "50%"
@@ -23047,7 +23085,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var style = {
-	    backgroundColor: "#271758",
+	    backgroundColor: "#070A16",
 	    width: "100%",
 	    margin: 0,
 	    padding: 0,
@@ -23096,6 +23134,94 @@
 	}(_react2.default.Component);
 	
 	module.exports = Navbar;
+
+/***/ },
+/* 193 */
+/*!*************************************!*\
+  !*** ./src/client/app/WhatNext.jsx ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var style = {
+	    textDecoration: "none",
+	    color: '#3F5A95'
+	};
+	
+	function WhatNext() {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Was that game too simple? I made it at a panera on my lunch break. For free. You are welcome to pay me to make a better game. ',
+	            _react2.default.createElement(
+	                'strong',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { style: style, href: 'mailto:yeti.detective@gmail.com' },
+	                    'email'
+	                )
+	            ),
+	            ' or ',
+	            _react2.default.createElement(
+	                'strong',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { style: style, href: 'tel:8166592363' },
+	                    'call me'
+	                )
+	            ),
+	            '. I accept voicemails 24/7.'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'If you want to see what I can do with Angular, ',
+	            _react2.default.createElement(
+	                'strong',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { style: style, href: './wedding', target: '_blank' },
+	                    'click here'
+	                )
+	            ),
+	            '. To witness my powers with a MongoDB deployment, ',
+	            _react2.default.createElement(
+	                'strong',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { style: style, href: './urlShortner', target: 'blank' },
+	                    'click this one'
+	                )
+	            ),
+	            '.'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Otherwise, that\'s all I\'ve got for now. Party\'s over. You don\'t have to go home, but you can\'t stay here.'
+	        )
+	    );
+	}
+	
+	exports.default = WhatNext;
 
 /***/ }
 /******/ ]);

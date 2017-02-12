@@ -1,7 +1,7 @@
 import React from 'react';
 
 var triangle = "4em solid transparent";
-var hyp = "8em solid #413075";
+var hyp = "8em solid #15316D";
 
 var style = {
     width: "100%",
@@ -29,7 +29,7 @@ var right = {
 var jump = {
     width: "8em",
     height: "8em",
-    backgroundColor: "#413075",
+    backgroundColor: "#15316D",
     display: "inline-block",
     margin: "0px 20% 0px 20%",
     borderRadius: "50%"
