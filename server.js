@@ -1,4 +1,4 @@
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 var express = require('express');
 var app = express();
@@ -34,7 +34,7 @@ app.post('/click', (req, res) => {
     likes.howMany += 1;
     fs.writeFile('./src/client/public/likes.js', "module.exports = (" + JSON.stringify(likes) + ");", 'utf-8', (err, data)=>{
         if(err){throw err}
-        console.log('likes updated: ' + JSON.stringify(likes));
+        likes = require('./src/client/public/likes.js');
         res.json(likes);
     });
 });
