@@ -39,6 +39,10 @@ app.post('/click', (req, res) => {
     });
 });
 
+app.get('/click', (req, res) => {
+    res.json(likes);
+})
+
 app.listen(port, ()=>{
     console.log('listening on ' + port);
     });
