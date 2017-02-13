@@ -1,1 +1,1 @@
-module.exports = ({"howMany":79});
+module.exports = ({"howMany":3});
