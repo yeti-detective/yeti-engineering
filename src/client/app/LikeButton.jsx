@@ -1,5 +1,5 @@
 import React from 'react';
-var likes = require('../public/likes.js');
+import axios from 'axios';
 
 var style = {
                 border: 'solid #082156',
@@ -8,23 +8,45 @@ var style = {
                 color: '#3F5A95'
             };
 
-var LikeButton = React.createClass({
-    getInitialState: function(){
-        var cliLikes = parseInt(likes.howMany);
-        return {likesCount: cliLikes};
-    },
-    onLike: function(){
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "click", true);
-        xhttp.send();
-        xhttp.onreadystatechange = function(){
-            console.log(this.responseText);
-        }
-
-        let newLikesCount = this.state.likesCount + 1;
-        this.setState({likesCount: newLikesCount});
-    },
-    render: function(){
+class LikeButton extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            likesCount: 0
+        };
+        axios
+            .get('/likes')
+            .then((l)=>{
+                this.setState({likesCount: l.data.howMany});
+            });
+        this.getLikes = this.getLikes.bind(this);
+        this.setLikes = this.setLikes.bind(this);
+        this.onLike = this.onLike.bind(this);
+    }
+    
+    componentDidMount(){
+        this.setState({likesCount: this.state.preLikes});
+    }
+    
+    getLikes(){
+        
+    }
+    
+    setLikes(l){
+        this.setState({likesCount: l});
+    }
+    
+    onLike(){
+        axios.post("/click");
+        axios
+            .get("/likes")
+            .then((l)=>{
+                this.setState({likesCount: l.data.howMany});
+            });
+        this.setLikes(this.state.likesCount + 1);
+    }
+    
+    render(){
         return(
         <div>
             Likes : <span id="likes">{this.state.likesCount}</span>
@@ -32,6 +54,6 @@ var LikeButton = React.createClass({
         </div>
         );
     }
-});
+};
 
-module.exports = LikeButton;
+export default LikeButton;

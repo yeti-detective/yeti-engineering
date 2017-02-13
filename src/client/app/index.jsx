@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 
 import Navbar from './Navbar.jsx';
 import MyFace from './PictureOfMe.jsx';
-import LikeButton from './LikeButton2.jsx';
+import LikeButton from './LikeButton.jsx';
 import Explaining from './Explaining.jsx';
 import Links from './Links.jsx';
 import Bragging from './Bragging.jsx';
