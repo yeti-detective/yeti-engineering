@@ -1,2 +1,1 @@
-web: npm run watch
-web: npm run demon
+web: node server.js
