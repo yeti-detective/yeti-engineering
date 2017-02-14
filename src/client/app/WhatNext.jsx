@@ -2,7 +2,7 @@ import React from 'react';
 
 var style = {
     textDecoration: "none",
-    color: '#3F5A95'
+    color: '#318784'
 };
 
 function WhatNext(){

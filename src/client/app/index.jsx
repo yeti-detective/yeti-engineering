@@ -11,8 +11,9 @@ import PlatformerHolder from './PlatformerHolder.jsx';
 import WhatNext from './WhatNext.jsx';
 
 var style = {
-    width: '80%',
-    backgroundColor: '#161924',
+    width: '100%',
+    maxWidth: 1200,
+    backgroundColor: '#153162',
     margin: 'auto',
     padding: 4
 };

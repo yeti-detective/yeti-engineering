@@ -5,7 +5,7 @@ var style = {
                 border: 'solid #082156',
                 backgroundColor: '#070A16',
                 borderRadius: 10,
-                color: '#3F5A95'
+                color: '#318784'
             };
 
 class LikeButton extends React.Component{

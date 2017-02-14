@@ -98,8 +98,9 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var style = {
-	    width: '80%',
-	    backgroundColor: '#161924',
+	    width: '100%',
+	    maxWidth: 1200,
+	    backgroundColor: '#153162',
 	    margin: 'auto',
 	    padding: 4
 	};
@@ -22553,7 +22554,7 @@
 	    border: 'solid #082156',
 	    backgroundColor: '#070A16',
 	    borderRadius: 10,
-	    color: '#3F5A95'
+	    color: '#318784'
 	};
 	
 	var LikeButton = function (_React$Component) {
@@ -24335,7 +24336,7 @@
 	
 	var style = {
 	    textDecoration: "none",
-	    color: '#3F5A95'
+	    color: '#318784'
 	};
 	
 	var Bragging = React.createClass({
@@ -24601,7 +24602,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var recFill = "#161924";
+	var recFill = "#153162";
 	
 	var style = {
 	    width: "95%",
@@ -24658,11 +24659,11 @@
 	                "svg",
 	                { style: style, className: "screen", ref: "node" },
 	                _react2.default.createElement("rect", { x: this.props.xpos, y: this.props.ypos, fill: recFill, height: "25", width: "20" }),
-	                _react2.default.createElement("rect", { x: "40%", y: "370", fill: "#161924", height: "30", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "55%", y: "340", fill: "#161924", height: "60", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "70%", y: "310", fill: "#161924", height: "90", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "85%", y: "280", fill: "#161924", height: "120", width: "16%" }),
-	                _react2.default.createElement("rect", { x: "90%", y: "240", fill: "#161924", height: "40", width: "3" }),
+	                _react2.default.createElement("rect", { x: "40%", y: "370", fill: "#153162", height: "30", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "55%", y: "340", fill: "#153162", height: "60", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "70%", y: "310", fill: "#153162", height: "90", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "85%", y: "280", fill: "#153162", height: "120", width: "16%" }),
+	                _react2.default.createElement("rect", { x: "90%", y: "240", fill: "#153162", height: "40", width: "3" }),
 	                _react2.default.createElement("rect", { fill: "#FF0000", x: "90%", y: "242", height: "15", width: "30" })
 	            );
 	        }
@@ -24757,7 +24758,7 @@
 	
 	var style = {
 	    textDecoration: "none",
-	    color: '#3F5A95'
+	    color: '#318784'
 	};
 	
 	function WhatNext() {

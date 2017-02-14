@@ -2,7 +2,7 @@ var React = require('react');
 
 var style = {
     textDecoration: "none",
-    color: '#3F5A95'
+    color: '#318784'
 };
 
 var Bragging = React.createClass({
