@@ -67,6 +67,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/client/wedding.html",
+			"settings":
+			{
+				"buffer_size": 197,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -75,16 +83,20 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 112.0,
-		"last_filter": "install",
+		"height": 107.0,
+		"last_filter": "instal",
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 467.0
+		"width": 485.0
 	},
 	"console":
 	{
@@ -104,14 +116,17 @@
 	},
 	"expanded_folders":
 	[
-		"/home/yeti-d/node/react_resume",
-		"/home/yeti-d/node/react_resume/src",
-		"/home/yeti-d/node/react_resume/src/client",
-		"/home/yeti-d/node/react_resume/src/client/app",
-		"/home/yeti-d/node/react_resume/src/client/public"
+		"/Users/cb_yeti/node/react_resume/src",
+		"/Users/cb_yeti/node/react_resume/src/client",
+		"/Users/cb_yeti/node/react_resume/src/client/app",
+		"/Users/cb_yeti/node/react_resume/src/client/public"
 	],
 	"file_history":
 	[
+		"/Users/cb_yeti/node/react_resume/src/client/app/PaypalButton.jsx",
+		"/Users/cb_yeti/node/react_resume/src/client/app/WhatNext.old",
+		"/Users/cb_yeti/node/react_resume/src/client/app/WhatNext.jsx",
+		"/Users/cb_yeti/node/react_resume/src/client/app/WhatNext_old.jsx",
 		"/home/yeti-d/node/react_resume/server.js",
 		"/home/yeti-d/node/react_resume/src/client/app/LikeButton.jsx",
 		"/home/yeti-d/node/react_resume/src/client/app/Links.jsx",
@@ -187,7 +202,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -202,6 +217,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\t",
 			"161924",
 			"15316D",
 			"span",
@@ -218,6 +234,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"    ",
 			"082156",
 			"strong",
 			"../Movies",
@@ -233,18 +250,47 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/client/wedding.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 23.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -277,7 +323,7 @@
 	"project": "react_resume.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -19,17 +19,12 @@ class LikeButton extends React.Component{
             .then((l)=>{
                 this.setState({likesCount: l.data.howMany});
             });
-        this.getLikes = this.getLikes.bind(this);
         this.setLikes = this.setLikes.bind(this);
         this.onLike = this.onLike.bind(this);
     }
     
     componentDidMount(){
         this.setState({likesCount: this.state.preLikes});
-    }
-    
-    getLikes(){
-        
     }
     
     setLikes(l){
