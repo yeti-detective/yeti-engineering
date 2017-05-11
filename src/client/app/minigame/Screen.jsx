@@ -5,7 +5,7 @@ var recFill = "#153162";
 var style = {
     width: "95%",
     height: 400,
-    backgroundColor: "#082156",
+    backgroundColor: "#274578",
     marginBottom: 10,
     display: "block",
     margin: "auto"

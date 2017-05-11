@@ -11,8 +11,10 @@ function WhatNext(){
         <div>
             <p>Was that game too simple? I made it at a panera on my lunch break. For free. You are welcome to pay me to make a better game.</p>
             <PaypalButton />
-            <p>If you want to see what I can do with Angular, <strong><a style={style} href="./wedding" target="_blank">click here</a></strong>. To witness my powers with a MongoDB deployment, <strong><a style={style} href="./urlShortner" target="blank">click this one</a></strong>.</p>
-            <p>Otherwise, that's all I've got for now. Party's over. You don't have to go home, but you can't stay here.</p>
+            <p>To witness my powers with a MongoDB deployment, check out my <strong><a style={style} href="https://url-redirect-maker.herokuapp.com/" target="blank">url redirect maker</a></strong>. That's based on an API I made. It validates the URL with npm's 'valid-url' package.</p>
+            <p>To add my impending wedding to your Google Calendar, see my <strong><a style={style} href="https://marrybaby.herokuapp.com/" target="blank">save the date</a></strong> page. (Don't tell Julia, she didn't approve that picture.)</p>
+            <p>So there you go. Hire me. Somebody pay me. Please.</p>
+            <p>Peace out</p>
         </div>
     );
 }

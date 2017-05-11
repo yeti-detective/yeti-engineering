@@ -13,7 +13,7 @@ import WhatNext from './WhatNext.jsx';
 var style = {
     width: '100%',
     maxWidth: 1200,
-    backgroundColor: '#153162',
+    background: 'linear-gradient(#153162, #071F49)',
     margin: 'auto',
     padding: 4
 };

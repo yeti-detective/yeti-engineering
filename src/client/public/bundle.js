@@ -100,7 +100,7 @@
 	var style = {
 	    width: '100%',
 	    maxWidth: 1200,
-	    backgroundColor: '#153162',
+	    background: 'linear-gradient(#153162, #071F49)',
 	    margin: 'auto',
 	    padding: 4
 	};
@@ -24453,7 +24453,7 @@
 	            // gravity
 	            // ground level
 	            if (this.state.x < this.state.svgWidth * 0.4 - 20) {
-	                if (this.state.y > 370) {
+	                if (this.state.y > 363) {
 	                    this.setState({ velJ: 0, canJump: true });
 	                } else {
 	                    this.setState({ velJ: this.state.velJ - 1, canJump: false });
@@ -24609,7 +24609,7 @@
 	var style = {
 	    width: "95%",
 	    height: 400,
-	    backgroundColor: "#082156",
+	    backgroundColor: "#274578",
 	    marginBottom: 10,
 	    display: "block",
 	    margin: "auto"
@@ -24692,7 +24692,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var triangle = "4em solid transparent";
-	var hyp = "8em solid #082156";
+	var hyp = "8em solid #274578";
 	
 	var style = {
 	    width: "100%",
@@ -24720,7 +24720,7 @@
 	var jump = {
 	    width: "8em",
 	    height: "8em",
-	    backgroundColor: "#082156",
+	    backgroundColor: "#274578",
 	    display: "inline-block",
 	    margin: "0px 20% 0px 20%",
 	    borderRadius: "50%"
@@ -24780,32 +24780,42 @@
 	        _react2.default.createElement(
 	            'p',
 	            null,
-	            'If you want to see what I can do with Angular, ',
+	            'To witness my powers with a MongoDB deployment, check out my ',
 	            _react2.default.createElement(
 	                'strong',
 	                null,
 	                _react2.default.createElement(
 	                    'a',
-	                    { style: style, href: './wedding', target: '_blank' },
-	                    'click here'
+	                    { style: style, href: 'https://url-redirect-maker.herokuapp.com/', target: 'blank' },
+	                    'url redirect maker'
 	                )
 	            ),
-	            '. To witness my powers with a MongoDB deployment, ',
-	            _react2.default.createElement(
-	                'strong',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { style: style, href: './urlShortner', target: 'blank' },
-	                    'click this one'
-	                )
-	            ),
-	            '.'
+	            '. That\'s based on an API I made. It validates the URL with npm\'s \'valid-url\' package.'
 	        ),
 	        _react2.default.createElement(
 	            'p',
 	            null,
-	            'Otherwise, that\'s all I\'ve got for now. Party\'s over. You don\'t have to go home, but you can\'t stay here.'
+	            'To add my impending wedding to your Google Calendar, see my ',
+	            _react2.default.createElement(
+	                'strong',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { style: style, href: 'https://marrybaby.herokuapp.com/', target: 'blank' },
+	                    'save the date'
+	                )
+	            ),
+	            ' page. (Don\'t tell Julia, she didn\'t approve that picture.)'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'So there you go. Hire me. Somebody pay me. Please.'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Peace out'
 	        )
 	    );
 	}

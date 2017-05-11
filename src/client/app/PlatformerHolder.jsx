@@ -43,7 +43,7 @@ class PlatformerHolder extends React.Component {
         // gravity
         // ground level
         if(this.state.x < this.state.svgWidth * 0.4 - 20){
-            if(this.state.y > 370){
+            if(this.state.y > 363){
                 this.setState({velJ: 0, canJump: true});
             }else{
                 this.setState({velJ: this.state.velJ - 1, canJump: false});
