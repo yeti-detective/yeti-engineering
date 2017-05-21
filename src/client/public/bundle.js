@@ -24267,7 +24267,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var style = {
-	    color: "#082156",
+	    color: "#264586",
 	    margin: "5%",
 	    fontSize: "2.5em"
 	};
@@ -24806,6 +24806,20 @@
 	                )
 	            ),
 	            ' page. (Don\'t tell Julia, she didn\'t approve that picture.)'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'If you\'ve ever wanted an API that will let you get Amazon Wishlist data, ',
+	            _react2.default.createElement(
+	                'strong',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { style: style, href: 'https://yetis-amazon-wishlist-api.herokuapp.com/', target: 'blank' },
+	                    'I kind of made one.'
+	                )
+	            )
 	        ),
 	        _react2.default.createElement(
 	            'p',

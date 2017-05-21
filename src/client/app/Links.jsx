@@ -1,7 +1,7 @@
 import React from 'react';
 
 var style = {
-    color: "#082156",
+    color: "#264586",
     margin: "5%",
     fontSize: "2.5em"
 };
