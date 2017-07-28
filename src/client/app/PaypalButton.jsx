@@ -13,21 +13,19 @@ class PaypalButton extends React.Component {
                     <input type="hidden" name="hosted_button_id" value="PS8V3LHMLA6WG" />
                     <table style={style}>
                     <tr><td><input type="hidden" name="on0" value="Rates" />Rates</td></tr><tr><td><select name="os0">
-                        <option value="Hour of Coding">Hour of Coding $125.00 USD</option>
-                        <option value="Week of Coding">Week of Coding $3,000.00 USD</option>
-                        <option value="Month of Coding">Month of Coding $10,000.00 USD</option>
+                    	<option value="Hour of Coding">Hour of Coding $75.00 USD</option>
+                    	<option value="Week of Coding">Week of Coding $1,500.00 USD</option>
+                    	<option value="Month of Coding">Month of Coding $5,000.00 USD</option>
                     </select> </td></tr>
                     </table>
                     <input type="hidden" name="currency_code" value="USD" />
                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                 </form>
+
             </div>
         )
     }
 };
 
 export default PaypalButton;
-
-/*
-                */
