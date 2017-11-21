@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+
 
 var style = {
                 border: 'solid #082156',
@@ -7,6 +8,7 @@ var style = {
                 borderRadius: 10,
                 color: '#318784'
             };
+            
 
 class LikeButton extends React.Component{
     constructor(){
@@ -14,38 +16,46 @@ class LikeButton extends React.Component{
         this.state = {
             likesCount: 0
         };
-        axios
-            .get('/likes')
-            .then((l)=>{
-                this.setState({likesCount: l.data.howMany});
-            });
-        this.setLikes = this.setLikes.bind(this);
-        this.onLike = this.onLike.bind(this);
+        this.upLike = this.upLike.bind(this)
     }
     
-    componentDidMount(){
-        this.setState({likesCount: this.state.preLikes});
+    componentWillMount () {
+        let xhr = new XMLHttpRequest()
+        xhr.open('GET', './click')
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                this.setState({
+                    likesCount: xhr.responseText
+                })
+            }
+        }
+        xhr.send()
     }
     
-    setLikes(l){
-        this.setState({likesCount: l});
+    upLike (like) {
+        this.setState({
+            likeCount: like
+        })
     }
     
-    onLike(){
-        axios.post("/click");
-        axios
-            .get("/likes")
-            .then((l)=>{
-                this.setState({likesCount: l.data.howMany});
-            });
-        this.setLikes(this.state.likesCount + 1);
+    onLike () {
+        let xhr = new XMLHttpRequest()
+        xhr.open('POST', './click')
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                this.setState({
+                    likesCount: xhr.responseText
+                })
+            }
+        }
+        xhr.send()
     }
     
     render(){
         return(
         <div>
             Likes : <span id="likes">{this.state.likesCount}</span>
-            <div><button style={style} onClick={this.onLike}>Like Me</button></div>
+            <div><button style={style} onClick={() => {this.onLike()}}>Like Me</button></div>
         </div>
         );
     }

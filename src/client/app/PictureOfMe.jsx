@@ -12,7 +12,7 @@ var style = {
 var MyFace = React.createClass({
     
     render: function(){
-        return <img style={style} alt="photo of a handsome man" src="https://dl.dropbox.com/s/hubt7qg7bhjrq73/Dapper.jpg?dl=0" />;
+        return <img style={style} alt="photo of a handsome man" src="https://dl.dropbox.com/s/wb4nyxqu7olzgc4/ScarfHandsome.jpg?dl=0" />;
     }
 });
 

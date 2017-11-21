@@ -3,9 +3,11 @@ var port = process.env.PORT || 8000;
 var express = require('express');
 var app = express();
 var path = require('path');
-var fs = require('fs');
-var likes = require('./src/client/public/likes.js');
-console.log(likes);
+const mongo = require('mongodb').MongoClient
+
+var db
+var likes
+var id
 
 // serve the app
 app.get('/', (req, res) => {
@@ -31,18 +33,23 @@ app.get('/likes', (req, res) =>{
 
 // post likes to the hosted database
 app.post('/click', (req, res) => {
-    likes.howMany += 1;
-    fs.writeFile('./src/client/public/likes.js', "module.exports = (" + JSON.stringify(likes) + ");", 'utf-8', (err, data)=>{
-        if(err){throw err}
-        likes = require('./src/client/public/likes.js');
-        res.json(likes);
-    });
+    db.collection('likes').save({_id: 69420247, likes: ++likes})
+    res.json(likes)
 });
 
 app.get('/click', (req, res) => {
     res.json(likes);
 })
 
-app.listen(port, ()=>{
+mongo.connect('mongodb://liker:thisisasecurepassword@ds157278.mlab.com:57278/yetis_first_db', (err, database) => {
+    if (err) throw err
+    db = database
+    app.listen(port, ()=>{
     console.log('listening on ' + port);
     });
+    db.collection('likes').find().toArray((err, result) => {
+        if (err) throw err
+        likes = result[0]['likes']
+    })
+})
+
