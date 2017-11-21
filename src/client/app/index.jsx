@@ -6,6 +6,7 @@ import MyFace from './PictureOfMe.jsx';
 import LikeButton from './LikeButton.jsx';
 import Explaining from './Explaining.jsx';
 import Links from './Links.jsx';
+import JustFollowingUp from './JustFollowingUp.jsx'
 import Bragging from './Bragging.jsx';
 import PlatformerHolder from './PlatformerHolder.jsx';
 import WhatNext from './WhatNext.jsx';
@@ -27,6 +28,7 @@ class App extends React.Component {
                 <LikeButton />
                 <Explaining />
                 <Links />
+                <JustFollowingUp />
                 <Bragging />
                 <PlatformerHolder />
                 <WhatNext />

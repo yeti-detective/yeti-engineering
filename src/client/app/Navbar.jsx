@@ -9,17 +9,22 @@ var style = {
     position: "fixed",
     top: 0,
     left: 0,
-    textAlign: "left"
+    textAlign: "left",
+    display: "flex"
 };
 
 var headers = {
     display: "inline-block",
-    marginRight: "15%"
+    margin: "auto"
 };
+
+var link = {
+    color: "#3F5A95"
+}
 
 class Navbar extends React.Component {
     render(){
-        return <div style={style}><h2 style={headers}>Christopher Brown</h2><h3 style={headers}>web developer</h3></div>;
+        return <div style={style}><h2 style={headers}>Christopher Brown</h2><h3 style={headers}>JavaScript developer</h3><h3 style={headers}><a href="tel:8166592363" style={link}>call me</a></h3></div>;
     }
 }
 

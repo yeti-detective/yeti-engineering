@@ -77,6 +77,10 @@
 	
 	var _Links2 = _interopRequireDefault(_Links);
 	
+	var _JustFollowingUp = __webpack_require__(/*! ./JustFollowingUp.jsx */ 205);
+	
+	var _JustFollowingUp2 = _interopRequireDefault(_JustFollowingUp);
+	
 	var _Bragging = __webpack_require__(/*! ./Bragging.jsx */ 198);
 	
 	var _Bragging2 = _interopRequireDefault(_Bragging);
@@ -125,6 +129,7 @@
 	                _react2.default.createElement(_LikeButton2.default, null),
 	                _react2.default.createElement(_Explaining2.default, null),
 	                _react2.default.createElement(_Links2.default, null),
+	                _react2.default.createElement(_JustFollowingUp2.default, null),
 	                _react2.default.createElement(_Bragging2.default, null),
 	                _react2.default.createElement(_PlatformerHolder2.default, null),
 	                _react2.default.createElement(_WhatNext2.default, null)
@@ -23501,12 +23506,17 @@
 	    position: "fixed",
 	    top: 0,
 	    left: 0,
-	    textAlign: "left"
+	    textAlign: "left",
+	    display: "flex"
 	};
 	
 	var headers = {
 	    display: "inline-block",
-	    marginRight: "15%"
+	    margin: "auto"
+	};
+	
+	var link = {
+	    color: "#3F5A95"
 	};
 	
 	var Navbar = function (_React$Component) {
@@ -23532,7 +23542,16 @@
 	                _react2.default.createElement(
 	                    "h3",
 	                    { style: headers },
-	                    "web developer"
+	                    "JavaScript developer"
+	                ),
+	                _react2.default.createElement(
+	                    "h3",
+	                    { style: headers },
+	                    _react2.default.createElement(
+	                        "a",
+	                        { href: "tel:8166592363", style: link },
+	                        "call me"
+	                    )
 	                )
 	            );
 	        }
@@ -24142,10 +24161,6 @@
 	
 	var _PaypalButton2 = _interopRequireDefault(_PaypalButton);
 	
-	var _JustFollowingUp = __webpack_require__(/*! ./JustFollowingUp.jsx */ 205);
-	
-	var _JustFollowingUp2 = _interopRequireDefault(_JustFollowingUp);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var style = {
@@ -24163,7 +24178,6 @@
 	            'Was that game too simple? I made it at a panera on my lunch break. For free. You are welcome to pay me to make a better game.'
 	        ),
 	        _react2.default.createElement(_PaypalButton2.default, null),
-	        _react2.default.createElement(_JustFollowingUp2.default, null),
 	        _react2.default.createElement(
 	            'p',
 	            null,
@@ -24177,7 +24191,13 @@
 	                    'url redirect maker'
 	                )
 	            ),
-	            '. That\'s based on an API I made. It validates the URL with npm\'s \'valid-url\' package.'
+	            '. That\'s based on an ',
+	            _react2.default.createElement(
+	                'a',
+	                { href: 'https://github.com/yeti-detective/yet-azwl-api', target: '_blank', style: { color: "#3F5A95" } },
+	                'API I made'
+	            ),
+	            ' using the npm osmosis package (web scraper.) It validates the URL with npm\'s \'valid-url\' package.'
 	        ),
 	        _react2.default.createElement(
 	            'p',
