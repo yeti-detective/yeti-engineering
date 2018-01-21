@@ -6,10 +6,11 @@ import MyFace from './PictureOfMe.jsx';
 import LikeButton from './LikeButton.jsx';
 import Explaining from './Explaining.jsx';
 import Links from './Links.jsx';
-import JustFollowingUp from './JustFollowingUp.jsx'
+import JustFollowingUp from './JustFollowingUp.jsx';
 import Bragging from './Bragging.jsx';
 import PlatformerHolder from './PlatformerHolder.jsx';
 import WhatNext from './WhatNext.jsx';
+import YetiFlashlight from './YetiFlashlight.jsx';
 
 var style = {
     width: '100%',
@@ -29,6 +30,7 @@ class App extends React.Component {
                 <Explaining />
                 <Links />
                 <JustFollowingUp />
+                <YetiFlashlight />
                 <Bragging />
                 <PlatformerHolder />
                 <WhatNext />
