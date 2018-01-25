@@ -23864,7 +23864,7 @@
   \********************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -23881,27 +23881,37 @@
 	
 	function JustFollowingUp() {
 	    return _react2.default.createElement(
-	        "div",
+	        'div',
 	        { style: style },
 	        _react2.default.createElement(
-	            "h4",
+	            'h4',
 	            null,
-	            "Need someone who can implement login? Here's a fun little app I made to help freelancers track their pending invoices."
+	            'Need someone who can implement login? Here\'s a fun little app I made to help freelancers track their pending invoices.'
 	        ),
 	        _react2.default.createElement(
-	            "h5",
+	            'h5',
 	            null,
-	            "(Coming soon to iOS and Android)"
+	            'Available on Google Play'
 	        ),
 	        _react2.default.createElement(
-	            "a",
-	            { href: "https://just-following-up-web.herokuapp.com/", target: "_blank" },
-	            _react2.default.createElement("img", { style: { borderRadius: "5px" }, src: "https://dl.dropbox.com/s/28k7po2vjxil7yh/JFU.PNG?dl=0" })
+	            'a',
+	            { href: 'https://play.google.com/store/apps/details?id=com.justfollowingup&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' },
+	            _react2.default.createElement('img', { style: { width: 200 }, alt: 'Get it on Google Play', src: 'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' })
 	        ),
 	        _react2.default.createElement(
-	            "h5",
+	            'h5',
 	            null,
-	            "(yes it is hosted on Heroku on the free plan because I have no funding, please pay me)"
+	            '(Coming soon to iOS)'
+	        ),
+	        _react2.default.createElement(
+	            'a',
+	            { href: 'https://just-following-up-web.herokuapp.com/', target: '_blank' },
+	            _react2.default.createElement('img', { style: { borderRadius: "5px" }, src: 'https://dl.dropbox.com/s/28k7po2vjxil7yh/JFU.PNG?dl=0' })
+	        ),
+	        _react2.default.createElement(
+	            'h5',
+	            null,
+	            '(yes it is hosted on Heroku on the free plan because I have no funding, please pay me)'
 	        )
 	    );
 	}
