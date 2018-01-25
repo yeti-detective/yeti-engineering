@@ -23895,7 +23895,7 @@
 	        ),
 	        _react2.default.createElement(
 	            'a',
-	            { href: 'https://play.google.com/store/apps/details?id=com.justfollowingup&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' },
+	            { href: 'https://play.google.com/store/apps/details?id=com.justfollowingup&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1', target: '_blank' },
 	            _react2.default.createElement('img', { style: { width: 200 }, alt: 'Get it on Google Play', src: 'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' })
 	        ),
 	        _react2.default.createElement(
