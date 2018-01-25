@@ -23886,7 +23886,7 @@
 	        _react2.default.createElement(
 	            'h4',
 	            null,
-	            'Need someone who can implement login? Here\'s a fun little app I made to help freelancers track their pending invoices.'
+	            'Need someone who can implement login? Here\'s a fun little app I made to help freelancers track their pending invoices. Login is handled through the Auth0 API'
 	        ),
 	        _react2.default.createElement(
 	            'h5',

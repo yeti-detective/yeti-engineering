@@ -7,7 +7,7 @@ const style = {
 export default function JustFollowingUp () {
     return (
         <div style={style}>
-            <h4>Need someone who can implement login? Here's a fun little app I made to help freelancers track their pending invoices.</h4>
+            <h4>Need someone who can implement login? Here's a fun little app I made to help freelancers track their pending invoices. Login is handled through the Auth0 API</h4>
             <h5>Available on Google Play</h5>
             <a href='https://play.google.com/store/apps/details?id=com.justfollowingup&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style={{width: 200}} alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
             <h5>(Coming soon to iOS)</h5>
