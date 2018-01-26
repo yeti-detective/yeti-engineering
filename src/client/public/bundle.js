@@ -23905,7 +23905,7 @@
 	        ),
 	        _react2.default.createElement(
 	            'a',
-	            { href: 'https://just-following-up-web.herokuapp.com/', target: '_blank' },
+	            { href: 'http://jfollowingup.com', target: '_blank' },
 	            _react2.default.createElement('img', { style: { borderRadius: "5px" }, src: 'https://dl.dropbox.com/s/28k7po2vjxil7yh/JFU.PNG?dl=0' })
 	        ),
 	        _react2.default.createElement(
