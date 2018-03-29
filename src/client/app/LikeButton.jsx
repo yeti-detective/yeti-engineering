@@ -55,7 +55,7 @@ class LikeButton extends React.Component{
         return(
         <div>
             Likes : <span id="likes">{this.state.likesCount}</span>
-            <div><button style={style} onClick={() => {this.onLike()}}>Like Me</button></div>
+            <div><button style={style} onClick={() => {this.onLike()}} title="likes stored on mongodb instance">Click to Like!</button></div>
         </div>
         );
     }

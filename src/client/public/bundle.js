@@ -23592,7 +23592,7 @@
 	
 	
 	    render: function render() {
-	        return React.createElement('img', { style: style, alt: 'photo of a handsome man', src: 'https://dl.dropbox.com/s/wb4nyxqu7olzgc4/ScarfHandsome.jpg?dl=0' });
+	        return React.createElement('img', { style: style, title: 'photo of a handsome man', src: 'https://dl.dropbox.com/s/me1oc1td70g5kzy/TrainSquint.jpg?dl=0' });
 	    }
 	});
 	
@@ -23710,8 +23710,8 @@
 	                        'button',
 	                        { style: style, onClick: function onClick() {
 	                                _this4.onLike();
-	                            } },
-	                        'Like Me'
+	                            }, title: 'likes stored on mongodb instance' },
+	                        'Click to Like!'
 	                    )
 	                )
 	            );
