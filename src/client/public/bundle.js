@@ -97,6 +97,10 @@
 	
 	var _YetiFlashlight2 = _interopRequireDefault(_YetiFlashlight);
 	
+	var _SoundClone = __webpack_require__(/*! ./SoundClone.jsx */ 206);
+	
+	var _SoundClone2 = _interopRequireDefault(_SoundClone);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -135,6 +139,7 @@
 	                _react2.default.createElement(_Links2.default, null),
 	                _react2.default.createElement(_JustFollowingUp2.default, null),
 	                _react2.default.createElement(_YetiFlashlight2.default, null),
+	                _react2.default.createElement(_SoundClone2.default, null),
 	                _react2.default.createElement(_Bragging2.default, null),
 	                _react2.default.createElement(_PlatformerHolder2.default, null),
 	                _react2.default.createElement(_WhatNext2.default, null)
@@ -24612,6 +24617,80 @@
 	    height: 400,
 	    width: 'auto'
 	};
+
+/***/ }),
+/* 206 */
+/*!***************************************!*\
+  !*** ./src/client/app/SoundClone.jsx ***!
+  \***************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SoundClone = function SoundClone(props) {
+	    return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	            "h2",
+	            null,
+	            "I Learned Ruby!"
+	        ),
+	        _react2.default.createElement(
+	            "p",
+	            null,
+	            "In March 2018 I attended an exclusive NYC code bootcamp & learned Ruby, Rails, Postgresql, and other skills. Get at me."
+	        ),
+	        _react2.default.createElement(
+	            "p",
+	            null,
+	            "Check out my full-stack project, Rails backend, React frontend. It's a clone of ",
+	            _react2.default.createElement(
+	                "a",
+	                { href: "www.soundcloud.com", target: "_blank" },
+	                "SoundCloud"
+	            )
+	        ),
+	        _react2.default.createElement(
+	            "p",
+	            null,
+	            "I call it ",
+	            _react2.default.createElement(
+	                "a",
+	                { href: "https://chris-b-soundclone.herokuapp.com", target: "_blank" },
+	                "SoundClone"
+	            ),
+	            " (not very original, but it's too late to change it now.)"
+	        ),
+	        _react2.default.createElement("img", {
+	            style: { width: '80%', height: 'auto' },
+	            src: "https://dl.dropbox.com/s/548urphtr7gly2e/20180518LandingPage.png?dl=0",
+	            title: "screenshot of landing page of soundclone"
+	        }),
+	        _react2.default.createElement(
+	            "p",
+	            null,
+	            "GitHub repo ",
+	            _react2.default.createElement(
+	                "a",
+	                { href: "https://github.com/yeti-detective/SoundClone", target: "_blank" },
+	                "here"
+	            )
+	        )
+	    );
+	};
+	
+	exports.default = SoundClone;
 
 /***/ })
 /******/ ]);
