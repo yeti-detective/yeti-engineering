@@ -27,12 +27,14 @@ class PlatformerHolder extends React.Component {
   }
 
   getSvgWidth(wdth) {
-    if(wdth != this.state.svgWidth){this.setState({svgWidth: wdth})}
+    if (!this.state.win) {
+      if(wdth != this.state.svgWidth){this.setState({svgWidth: wdth})}
+    }
   }
 
   gameStart(){
     // loop approx 30 fps
-    setInterval(this.gameRun, 35);
+    window.gameLoop = setInterval(this.gameRun, 35);
   }
 
   gameRun(){
@@ -119,6 +121,7 @@ class PlatformerHolder extends React.Component {
     // win state
     if(this.state.x > this.state.svgWidth * 0.9 - 20 && this.state.x < this.state.svgWidth * 0.9 + 30 && this.state.y > 242 - 25 && this.state.y < 242 + 15 + 25){
       this.setState({win: true});
+      clearInterval(window.gameLoop)
     }
 
     // entropy & obstacles
@@ -155,6 +158,16 @@ class PlatformerHolder extends React.Component {
       <div className="holder">
         <Screen xpos={this.state.x} ypos={this.state.y} getWdth={this.getSvgWidth} win={this.state.win} />
         <Controller left={this.motionLeft} right={this.motionRight} jump={this.jump} />
+        <section>
+          <p>
+            This platformer is a React component. The container holds the game logic & runs a loop with setInterval.
+            The container passes methods to the controller component, allowing the user to affect the little
+            jumping square buddy. The controls really just give bumps to the character's horizontal or vertical
+            velocity values which are then decremented each loop by an entropy and gravity algorithm, respectively.
+            The animation is accomplished by passing those physics values from the container to the screen component
+            which then renders SVG elements in the positions given by the parent.
+          </p>
+        </section>
       </div>
     );
 
