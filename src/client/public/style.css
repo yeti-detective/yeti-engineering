@@ -26,8 +26,12 @@ body {
   margin: auto 0;
 }
 
-a {
+.header-bar a {
   color: #3F5A95;
+}
+
+a {
+  color: #318784;
 }
 
 .intro {
