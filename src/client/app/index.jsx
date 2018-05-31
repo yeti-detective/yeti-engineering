@@ -2,9 +2,10 @@ import React from 'react';
 import {render} from 'react-dom';
 
 import Navbar from './Navbar.jsx';
-import MyFace from './PictureOfMe.jsx';
-import LikeButton from './LikeButton.jsx';
-import Explaining from './Explaining.jsx';
+import Intro from './Intro.jsx';
+// import MyFace from './PictureOfMe.jsx';
+// import LikeButton from './LikeButton.jsx';
+// import Explaining from './Explaining.jsx';
 import Links from './Links.jsx';
 import JustFollowingUp from './JustFollowingUp.jsx';
 import Bragging from './Bragging.jsx';
@@ -26,9 +27,7 @@ class App extends React.Component {
         return (
             <div style={style}>
                 <Navbar />
-                <MyFace />
-                <LikeButton />
-                <Explaining />
+                <Intro />
                 <Links />
                 <JustFollowingUp />
                 <YetiFlashlight />

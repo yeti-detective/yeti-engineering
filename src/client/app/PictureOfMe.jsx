@@ -1,4 +1,5 @@
-var React = require('react');
+import React from 'react'
+import LikeButton from './LikeButton.jsx'
 
 var style = {
         borderRadius: '50%',
@@ -8,11 +9,14 @@ var style = {
     };
 
 const MyFace = () => (
-  <img
-    style={style}
-    title="photo of a handsome man"
-    src="/images/TrainSquint.jpg"
-  />
+  <div>
+    <img
+      style={style}
+      title="photo of a handsome man"
+      src="/images/TrainSquint.jpg"
+    />
+    <LikeButton />
+  </div>
 );
 
 export default MyFace;
