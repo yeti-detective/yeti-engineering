@@ -1,8 +1,9 @@
-# hello_react
+# [Motomorphosis Industries](http://www.motomorphosis-ind.com/)
+> This is my personal website. If you want to hire me, find me on:
 
-following the VERY handy tutorial found here:
-https://www.codementor.io/tamizhvendan/beginner-guide-setup-reactjs-environment-npm-babel-6-webpack-du107r9zr
+* [AngelList](https://angel.co/christopher-brown-72)
+* [LinkedIn](https://www.linkedin.com/in/xchristopherxbrown)
 
-This app is to become my resume. I will re-create another repository later for an empty React environment.
-Use 'npm run watch' to run webpack in watch mode (detects React component updates and compiles to bundle.js automatically)
-
+***
+> The main site is built on the MERN stack (Mongo, Express, React, Node).
+[email me](mailto:christopher.brown@motomorphosis-ind.com) if you have any questions.
