@@ -5,8 +5,7 @@ var style = {
     color: '#318784'
 };
 
-export default class Bragging extends Component {
-    render () {
+const Bragging = () => {
         return (
             <div>
                 <p>So if your team needs someone who is good with JavaScript, React, and Node, by all means <strong><a style={style} href="tel:8166592363">give me a call.</a></strong></p>
@@ -14,5 +13,6 @@ export default class Bragging extends Component {
                 <p>Ok, how about a little platformer?</p>
             </div>
         );
-    }
 };
+
+export default Bragging;
