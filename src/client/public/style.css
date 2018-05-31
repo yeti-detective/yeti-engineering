@@ -44,3 +44,8 @@ a {
   margin: auto 0;
   width: 50%;
 }
+
+.holder section {
+  text-align: justify;
+  padding: 4px;
+}
