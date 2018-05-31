@@ -20,6 +20,7 @@ const Explaining = () => (
         see the things you've created they go, "oh, cool," and you know in that
         moment that you've really changed their life in that moment...
       </p>
+      <h3>Like this!</h3>
   </div>
 );
 
