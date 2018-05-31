@@ -27,13 +27,14 @@ class App extends React.Component {
         return (
             <div style={style}>
                 <Navbar />
-                <Intro />
                 <Links />
+                <Intro />
+                <PlatformerHolder />
                 <JustFollowingUp />
                 <YetiFlashlight />
                 <SoundClone />
                 <Bragging />
-                <PlatformerHolder />
+                {/* <PlatformerHolder /> */}
                 <WhatNext />
             </div>
         );
