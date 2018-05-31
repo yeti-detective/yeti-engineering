@@ -1,7 +1,7 @@
-var React = require('react');
+import React, { Component } from 'react'
 
-var Explaining = React.createClass({
-    render: function(){
+export default class Explaining extends Component{
+    render () {
         return(
             <div>
                 <h3>Like My Beard!</h3>
@@ -13,6 +13,4 @@ var Explaining = React.createClass({
             </div>
         );
     }
-});
-
-module.exports = Explaining;
+};
