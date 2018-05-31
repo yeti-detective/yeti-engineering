@@ -22577,7 +22577,9 @@
 
 	"use strict";
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	
 	var _react = __webpack_require__(/*! react */ 1);
 	
@@ -22585,76 +22587,55 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
 	var style = {
-	    backgroundColor: "#070A16",
-	    width: "100%",
-	    margin: 0,
-	    padding: 0,
-	    overflow: "hidden",
-	    position: "fixed",
-	    top: 0,
-	    left: 0,
-	    textAlign: "left",
-	    display: "flex"
+	  backgroundColor: "#070A16",
+	  width: "100%",
+	  margin: 0,
+	  padding: 0,
+	  overflow: "hidden",
+	  position: "fixed",
+	  top: 0,
+	  left: 0,
+	  textAlign: "left",
+	  display: "flex"
 	};
 	
 	var headers = {
-	    display: "inline-block",
-	    margin: "auto"
+	  display: "inline-block",
+	  margin: "auto"
 	};
 	
 	var link = {
-	    color: "#3F5A95"
+	  color: "#3F5A95"
 	};
 	
-	var Navbar = function (_React$Component) {
-	    _inherits(Navbar, _React$Component);
+	var Navbar = function Navbar() {
+	  return _react2.default.createElement(
+	    "div",
+	    { style: style },
+	    _react2.default.createElement(
+	      "h2",
+	      { style: headers },
+	      "Christopher Brown"
+	    ),
+	    _react2.default.createElement(
+	      "h3",
+	      { style: headers },
+	      "Software Developer"
+	    ),
+	    _react2.default.createElement(
+	      "h3",
+	      { style: headers },
+	      _react2.default.createElement(
+	        "a",
+	        { href: "tel:8166592363", style: link },
+	        "call me"
+	      )
+	    )
+	  );
+	};
 	
-	    function Navbar() {
-	        _classCallCheck(this, Navbar);
-	
-	        return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
-	    }
-	
-	    _createClass(Navbar, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { style: style },
-	                _react2.default.createElement(
-	                    "h2",
-	                    { style: headers },
-	                    "Christopher Brown"
-	                ),
-	                _react2.default.createElement(
-	                    "h3",
-	                    { style: headers },
-	                    "JavaScript developer"
-	                ),
-	                _react2.default.createElement(
-	                    "h3",
-	                    { style: headers },
-	                    _react2.default.createElement(
-	                        "a",
-	                        { href: "tel:8166592363", style: link },
-	                        "call me"
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Navbar;
-	}(_react2.default.Component);
-	
-	module.exports = Navbar;
+	exports.default = Navbar;
 
 /***/ }),
 /* 185 */
@@ -23046,73 +23027,49 @@
 	    value: true
 	});
 	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
 	var style = {
 	    textDecoration: "none",
 	    color: '#318784'
 	};
 	
-	var Bragging = function (_Component) {
-	    _inherits(Bragging, _Component);
-	
-	    function Bragging() {
-	        _classCallCheck(this, Bragging);
-	
-	        return _possibleConstructorReturn(this, (Bragging.__proto__ || Object.getPrototypeOf(Bragging)).apply(this, arguments));
-	    }
-	
-	    _createClass(Bragging, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
+	var Bragging = function Bragging() {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'So if your team needs someone who is good with JavaScript, React, and Node, by all means ',
+	            _react2.default.createElement(
+	                'strong',
 	                null,
 	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'So if your team needs someone who is good with JavaScript, React, and Node, by all means ',
-	                    _react2.default.createElement(
-	                        'strong',
-	                        null,
-	                        _react2.default.createElement(
-	                            'a',
-	                            { style: style, href: 'tel:8166592363' },
-	                            'give me a call.'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'What\'s that? This page is alright, but you want to see something functional?'
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Ok, how about a little platformer?'
+	                    'a',
+	                    { style: style, href: 'tel:8166592363' },
+	                    'give me a call.'
 	                )
-	            );
-	        }
-	    }]);
-	
-	    return Bragging;
-	}(_react.Component);
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'What\'s that? This page is alright, but you want to see something functional?'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Ok, how about a little platformer?'
+	        )
+	    );
+	};
 	
 	exports.default = Bragging;
-	;
 
 /***/ }),
 /* 191 */

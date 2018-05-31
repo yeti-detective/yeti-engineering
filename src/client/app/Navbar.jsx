@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <div style={style}>
       <h2 style={headers}>Christopher Brown</h2>
-      <h3 style={headers}>JavaScript developer</h3>
+      <h3 style={headers}>Software Developer</h3>
       <h3 style={headers}>
         <a href="tel:8166592363" style={link}>call me</a>
       </h3>
