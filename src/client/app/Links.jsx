@@ -18,7 +18,7 @@ class Links extends React.Component {
                 <a href="https://www.freecodecamp.com/yeti-detective/front-end-certification" target="_blank"><i className="fab fa-lg fa-free-code-camp" style={style}></i></a>
                 <a href="https://github.com/yeti-detective" target="_blank"><i className="fab fa-lg fa-github" style={style}></i></a>
                 <a href="https://www.linkedin.com/in/xchristopherxbrown" target="_blank"><i className="fab fa-lg fa-linkedin-in" style={style}></i></a>
-                <a href="mailto:christopher.michael.brown@gmail.com" target="_blank"><i className="fa fa-lg fa-envelope" style={style}></i></a>
+                <a href="mailto:christopher.brown@motomorphosis-ind.com" target="_blank"><i className="fa fa-lg fa-envelope" style={style}></i></a>
             </div>
         );
     }

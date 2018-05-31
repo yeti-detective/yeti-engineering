@@ -3,7 +3,6 @@ import LikeButton from './LikeButton.jsx'
 
 var style = {
         borderRadius: '50%',
-        marginTop: 60,
         height: 200,
         width: 'auto'
     };
@@ -16,6 +15,8 @@ const MyFace = () => (
       src="/images/TrainSquint.jpg"
     />
     <LikeButton />
+    <h3>Like My Beard!</h3>
+    <br/>
   </div>
 );
 
