@@ -14,6 +14,14 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/client/index.html'));
 });
 
+app.get('/images/:filename', (req, res) => {
+  res.sendFile(path.join(__dirname + `/src/client/public/images/${req.params.filename}`))
+})
+
+app.get('/style', (req, res) => {
+  res.sendFile(path.join(__dirname + '/src/client/public/style.css'))
+})
+
 app.get('/wedding', (req, res) =>{
     res.sendFile(path.join(__dirname + '/src/client/wedding.html'));
 });
@@ -39,10 +47,6 @@ app.post('/click', (req, res) => {
 
 app.get('/click', (req, res) => {
     res.json(likes);
-})
-
-app.get('/images/:filename', (req, res) => {
-  res.sendFile(path.join(__dirname + `/src/images/${req.params.filename}`))
 })
 
 mongo.connect('mongodb://liker:thisisasecurepassword@ds157278.mlab.com:57278/yetis_first_db', (err, database) => {
