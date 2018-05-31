@@ -49,3 +49,13 @@ a {
   text-align: justify;
   padding: 4px;
 }
+
+h2 a {
+  color: #3F5A95;
+}
+
+.project-explanation {
+    padding: 0 4px;
+    text-align: justify;
+    box-sizing: border-box;
+}
