@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(#082156, #15316C);
+    color: #3F5A95;
+    font-family: Tahoma, monospace, sans-serif;
+    margin: 0;
+}
+
+#app {
+    width: 100%;
+    text-align: center;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-around;
+}
+
+.explaining {
+  text-align: right;
+  margin: auto 0;
+  width: 50%;
+}
