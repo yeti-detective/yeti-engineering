@@ -22665,27 +22665,27 @@
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	var React = __webpack_require__(/*! react */ 1);
 	
-	// new scarf picture is #191328
-	
 	var style = {
-	    borderRadius: '50%',
-	    marginTop: 60,
-	    height: 200,
-	    width: 'auto'
+	  borderRadius: '50%',
+	  marginTop: 60,
+	  height: 200,
+	  width: 'auto'
 	};
 	
-	var MyFace = React.createClass({
-	    displayName: 'MyFace',
+	var MyFace = function MyFace() {
+	  return React.createElement('img', {
+	    style: style,
+	    title: 'photo of a handsome man',
+	    src: '/images/TrainSquint.jpg'
+	  });
+	};
 	
-	
-	    render: function render() {
-	        return React.createElement('img', { style: style, title: 'photo of a handsome man', src: 'https://dl.dropbox.com/s/me1oc1td70g5kzy/TrainSquint.jpg?dl=0' });
-	    }
-	});
-	
-	module.exports = MyFace;
+	exports.default = MyFace;
 
 /***/ }),
 /* 186 */
@@ -22823,46 +22823,74 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(/*! react */ 1);
-	
-	var Explaining = React.createClass({
-	    displayName: 'Explaining',
-	
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(
-	                'h3',
-	                null,
-	                'Like My Beard!'
-	            ),
-	            React.createElement('br', null),
-	            React.createElement(
-	                'p',
-	                null,
-	                'I built this page with React and host it from a Node server which I also wrote.'
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                'You could say I\'m pretty good at JavaScript.'
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                'But you don\'t have to take MY word for it.'
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                'Click on these links to adore my work'
-	            )
-	        );
-	    }
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
 	});
 	
-	module.exports = Explaining;
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Explaining = function (_Component) {
+	    _inherits(Explaining, _Component);
+	
+	    function Explaining() {
+	        _classCallCheck(this, Explaining);
+	
+	        return _possibleConstructorReturn(this, (Explaining.__proto__ || Object.getPrototypeOf(Explaining)).apply(this, arguments));
+	    }
+	
+	    _createClass(Explaining, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Like My Beard!'
+	                ),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'I built this page with React and host it from a Node server which I also wrote.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'You could say I\'m pretty good at JavaScript.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'But you don\'t have to take MY word for it.'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Click on these links to adore my work'
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Explaining;
+	}(_react.Component);
+	
+	exports.default = Explaining;
+	;
 
 /***/ }),
 /* 188 */
@@ -23014,49 +23042,77 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(/*! react */ 1);
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var style = {
 	    textDecoration: "none",
 	    color: '#318784'
 	};
 	
-	var Bragging = React.createClass({
-	    displayName: 'Bragging',
+	var Bragging = function (_Component) {
+	    _inherits(Bragging, _Component);
 	
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(
-	                'p',
-	                null,
-	                'So if your team needs someone who is good with JavaScript, React, and Node, by all means ',
-	                React.createElement(
-	                    'strong',
-	                    null,
-	                    React.createElement(
-	                        'a',
-	                        { style: style, href: 'tel:8166592363' },
-	                        'give me a call.'
-	                    )
-	                )
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                'What\'s that? This page is alright, but you want to see something functional?'
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                'Ok, how about a little platformer?'
-	            )
-	        );
+	    function Bragging() {
+	        _classCallCheck(this, Bragging);
+	
+	        return _possibleConstructorReturn(this, (Bragging.__proto__ || Object.getPrototypeOf(Bragging)).apply(this, arguments));
 	    }
-	});
 	
-	module.exports = Bragging;
+	    _createClass(Bragging, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'So if your team needs someone who is good with JavaScript, React, and Node, by all means ',
+	                    _react2.default.createElement(
+	                        'strong',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { style: style, href: 'tel:8166592363' },
+	                            'give me a call.'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'What\'s that? This page is alright, but you want to see something functional?'
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Ok, how about a little platformer?'
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Bragging;
+	}(_react.Component);
+	
+	exports.default = Bragging;
+	;
 
 /***/ }),
 /* 191 */
