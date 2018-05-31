@@ -12,7 +12,8 @@ import Bragging from './Bragging.jsx';
 import PlatformerHolder from './PlatformerHolder.jsx';
 import WhatNext from './WhatNext.jsx';
 import YetiFlashlight from './YetiFlashlight.jsx';
-import SoundClone from './SoundClone.jsx';
+// import SoundClone from './SoundClone.jsx';
+import Projects from './Projects.jsx';
 
 var style = {
     width: '100%',
@@ -30,9 +31,10 @@ class App extends React.Component {
                 <Links />
                 <Intro />
                 <PlatformerHolder />
+                <Projects />
                 <JustFollowingUp />
                 <YetiFlashlight />
-                <SoundClone />
+                {/* <SoundClone /> */}
                 <Bragging />
                 {/* <PlatformerHolder /> */}
                 <WhatNext />
