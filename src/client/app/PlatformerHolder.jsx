@@ -167,6 +167,10 @@ class PlatformerHolder extends React.Component {
             The animation is accomplished by passing those physics values from the container to the screen component
             which then renders SVG elements in the positions given by the parent.
           </p>
+          <p>
+            Oh, and if you're viewing this on desktop, try resizing your window.
+            MY SVG IS RESPONSIVE! HA HAHA HA HAHA HA!
+          </p>
         </section>
       </div>
     );
