@@ -10,6 +10,26 @@ body {
     text-align: center;
 }
 
+.header-bar {
+  background-color: #070A16;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-bar h2, .header-bar h3 {
+  margin: auto 0;
+}
+
+a {
+  color: #3F5A95;
+}
+
 .intro {
   display: flex;
   justify-content: space-around;
