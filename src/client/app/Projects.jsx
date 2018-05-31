@@ -6,7 +6,9 @@ import YetiFlashlight from './YetiFlashlight.jsx'
 const Projects = () => (
   <section className="projects">
     <h1>Portfolio</h1>
-    <SoundClone />
+    <div className="projects-grid">
+      <SoundClone />
+    </div>
   </section>
 )
 
