@@ -22702,6 +22702,8 @@
 	    border: 'solid #082156',
 	    backgroundColor: '#070A16',
 	    borderRadius: 10,
+	    padding: 5,
+	    fontSize: 14,
 	    color: '#318784'
 	};
 	
@@ -22762,8 +22764,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            var _this4 = this;
-	
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -22778,10 +22778,11 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'button',
-	                        { style: style, onClick: function onClick() {
-	                                _this4.onLike();
-	                            }, title: 'likes stored on mongodb instance' },
-	                        'Click to Like!'
+	                        {
+	                            style: style,
+	                            onClick: this.onLike,
+	                            title: 'likes stored on mongodb instance' },
+	                        _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
 	                    )
 	                )
 	            );
@@ -22924,22 +22925,22 @@
 	                _react2.default.createElement(
 	                    "a",
 	                    { href: "https://codepen.io/Yeti_Detective", target: "_blank" },
-	                    _react2.default.createElement("i", { className: "fa fa-lg fa-codepen", style: style })
+	                    _react2.default.createElement("i", { className: "fab fa-lg fa-codepen", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
 	                    { href: "https://www.freecodecamp.com/yeti-detective/front-end-certification", target: "_blank" },
-	                    _react2.default.createElement("i", { className: "fa fa-lg fa-free-code-camp", style: style })
+	                    _react2.default.createElement("i", { className: "fab fa-lg fa-free-code-camp", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
 	                    { href: "https://github.com/yeti-detective", target: "_blank" },
-	                    _react2.default.createElement("i", { className: "fa fa-lg fa-github", style: style })
+	                    _react2.default.createElement("i", { className: "fab fa-lg fa-github", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
 	                    { href: "https://www.linkedin.com/in/xchristopherxbrown", target: "_blank" },
-	                    _react2.default.createElement("i", { className: "fa fa-lg fa-linkedin", style: style })
+	                    _react2.default.createElement("i", { className: "fab fa-lg fa-linkedin-in", style: style })
 	                ),
 	                _react2.default.createElement(
 	                    "a",
