@@ -1,13 +1,13 @@
-var port = process.env.PORT || 8000;
+let port = process.env.PORT || 8000;
 
-var express = require('express');
-var app = express();
-var path = require('path');
+const express = require('express');
+const app = express();
+const path = require('path');
 const mongo = require('mongodb').MongoClient
 
-var db
-var likes
-var id
+let db
+let likes
+let id
 
 // serve the app
 app.get('/', (req, res) => {
@@ -52,4 +52,3 @@ mongo.connect('mongodb://liker:thisisasecurepassword@ds157278.mlab.com:57278/yet
         likes = result[0]['likes']
     })
 })
-
