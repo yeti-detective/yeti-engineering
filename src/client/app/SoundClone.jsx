@@ -18,13 +18,12 @@ const SoundClone = props => (
           <p>
             SoundClone, inspired by <a href="https://www.soundcloud.com/" target="_blank">
             SoundCloud</a>, is a full stack app I developed as a student project
-            at <a href="https://appacademy.io" target="_blank">App Academy</a>
-            NYC.
+            at <a href="https://appacademy.io" target="_blank">App Academy</a> NYC.
           </p>
           <p>
             The backend uses Ruby on Rails to deploy a PostgreSQL database integrated
-            with an AWS S3 instance for media attachments, a Puma server handles
-            the HTTP traffic, and Rails' domain specific language Jbuilder creates
+            with an AWS S3 instance for media attachments. A Puma server handles
+            the HTTP traffic, and Rails' domain specific language, Jbuilder, creates
             the JSON views that power the app's API.
           </p>
           <p>

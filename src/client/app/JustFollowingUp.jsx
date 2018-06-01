@@ -8,7 +8,7 @@ const JustFollowingUp = () => (
       </a>
     </h2>
     <div className="just-following-up-container">
-      <section className="jfu-left-pane">
+      <section className="jfu-pane jfu-left-pane">
         <a href="http://jfollingup.com" target="_blank">
           <img className="jfu-screenshot" src="/images/JustFollowingUp.png"/>
         </a>
@@ -22,15 +22,15 @@ const JustFollowingUp = () => (
         <p>
           This app allows users to authenticate with Facebook, Google or Twitter as
           well as an email address by way of the <a href="https://auth0.com/"
-          target="_blank">Auth0 API</a>. On first login, they user is prompted to
+          target="_blank">Auth0 API</a>. On first login, the user is prompted to
           enter their company information. They can then go on to track customers,
           invoices and due dates.
         </p>
         <p>
           The tech stack for Just Following Up on the web consists of a Node Express
-          server connected by a JavaScript client to a MongoDB database hosted on
-          <a href="https://mlab.com/" target="_blank">Mlab</a>, and a React-powered
-          web client on the frontend.
+          server connected by a JavaScript client to a MongoDB database hosted
+          on <a href="https://mlab.com/" target="_blank">Mlab</a>, and a
+          React-powered web client on the frontend.
         </p>
       </section>
     </div>
