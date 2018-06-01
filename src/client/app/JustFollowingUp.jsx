@@ -32,16 +32,21 @@ const JustFollowingUp = () => (
           <a href="https://mlab.com/" target="_blank">Mlab</a>, and a React-powered
           web client on the frontend.
         </p>
-        <h5>Available on Google Play</h5>
-        <a
-          href='https://play.google.com/store/apps/details?id=com.justfollowingup&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
-          target="_blank">
-          <img
-            style={{width: 200}}
-            title='Get it on Google Play'
-            src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'
-          />
-        </a>
+      </section>
+    </div>
+    <br />
+    <h5>Available on Google Play</h5>
+    <a
+      href='https://play.google.com/store/apps/details?id=com.justfollowingup&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'
+      target="_blank">
+      <img
+        style={{width: 200}}
+        title='Get it on Google Play'
+        src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'
+      />
+    </a>
+    <section className="jfu-native grid-daddy">
+      <div className="col col-1-3 native-words">
         <p>
           The Android version of Just Following Up hits the same backend server as
           the web app, so a user will be logging into the same account whether it's
@@ -49,8 +54,11 @@ const JustFollowingUp = () => (
           but the final APK was produced in Android Studio and uploaded to the Play
           store through the Google Play Console.
         </p>
-      </section>
-    </div>
+      </div>
+      <div className="col col-2-3">
+        <img src="/images/NativeJFU.png" className="jfu-native-screenshot" />
+      </div>
+    </section>
     <hr />
   </div>
 )

@@ -30,6 +30,20 @@ body {
   color: #3F5A95;
 }
 
+.grid-daddy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-1-3 {
+  width: 33%;
+}
+
+.col-2-3 {
+  width: 66%;
+}
+
 a {
   color: #318784;
 }
@@ -75,9 +89,10 @@ hr {
 
 .jfu-right-pane {
   width: 50%;
+  text-align: right;
 }
 
-.jfu-screenshot {
+.jfu-screenshot, .jfu-native-screenshot {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -86,4 +101,8 @@ hr {
 
 .jfu-left-pane {
   width: 50%;
+}
+
+.native-words {
+  text-align: left;
 }
