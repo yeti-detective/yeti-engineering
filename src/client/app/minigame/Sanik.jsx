@@ -38,7 +38,8 @@ const Sanik = () => (
     </p>
     <p>
       tl:dr; I wanted to make a mashup of Super Mario, Sonic the Hedgehog, & Pac-Man
-      so I did.
+      so I did. <a href="https://github.com/yeti-detective/ry_skim">check out
+      the code</a>.
     </p>
     <hr />
   </section>
