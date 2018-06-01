@@ -7,6 +7,7 @@ import Bragging from './Bragging.jsx';
 import PlatformerHolder from './PlatformerHolder.jsx';
 import WhatNext from './WhatNext.jsx';
 import Projects from './Projects.jsx';
+import AdditionalFacts from './AdditionalFacts.jsx';
 import Footer from './Footer.jsx';
 
 
@@ -26,6 +27,7 @@ class App extends React.Component {
                 <Intro />
                 <PlatformerHolder />
                 <Projects />
+                <AdditionalFacts />
                 <Footer />
             </div>
         );

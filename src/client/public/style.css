@@ -50,6 +50,10 @@ body {
   width: 66%;
 }
 
+.col {
+  padding: 10px;
+}
+
 a {
   color: #318784;
 }
@@ -153,6 +157,19 @@ hr {
 }
 
 .ruby-chess-words {
+  padding: 10px;
+}
+
+.additional-facts {
+  display: flex;
+}
+
+.about-me {
+  border-right: 1px solid #3F5A95;
+  padding: 10px;
+}
+
+.motomorphosis-industries {
   padding: 10px;
 }
 
