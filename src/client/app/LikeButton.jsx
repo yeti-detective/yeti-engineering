@@ -1,14 +1,14 @@
 import React from 'react';
-// import axios from 'axios';
-
 
 var style = {
                 border: 'solid #082156',
                 backgroundColor: '#070A16',
                 borderRadius: 10,
+                padding: 5,
+                fontSize: 14,
                 color: '#318784'
             };
-            
+
 
 class LikeButton extends React.Component{
     constructor(){
@@ -18,7 +18,7 @@ class LikeButton extends React.Component{
         };
         this.upLike = this.upLike.bind(this)
     }
-    
+
     componentWillMount () {
         let xhr = new XMLHttpRequest()
         xhr.open('GET', './click')
@@ -31,13 +31,13 @@ class LikeButton extends React.Component{
         }
         xhr.send()
     }
-    
+
     upLike (like) {
         this.setState({
             likeCount: like
         })
     }
-    
+
     onLike () {
         let xhr = new XMLHttpRequest()
         xhr.open('POST', './click')
@@ -50,12 +50,19 @@ class LikeButton extends React.Component{
         }
         xhr.send()
     }
-    
+
     render(){
         return(
         <div>
             Likes : <span id="likes">{this.state.likesCount}</span>
-            <div><button style={style} onClick={() => {this.onLike()}} title="likes stored on mongodb instance">Click to Like!</button></div>
+            <div>
+              <button
+                style={style}
+                onClick={this.onLike}
+                title="likes stored on mongodb instance">
+                <i className="fas fa-thumbs-up"></i>
+              </button>
+            </div>
         </div>
         );
     }

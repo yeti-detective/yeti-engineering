@@ -2,16 +2,18 @@ import React from 'react';
 import {render} from 'react-dom';
 
 import Navbar from './Navbar.jsx';
-import MyFace from './PictureOfMe.jsx';
-import LikeButton from './LikeButton.jsx';
-import Explaining from './Explaining.jsx';
+import Intro from './Intro.jsx';
+// import MyFace from './PictureOfMe.jsx';
+// import LikeButton from './LikeButton.jsx';
+// import Explaining from './Explaining.jsx';
 import Links from './Links.jsx';
 import JustFollowingUp from './JustFollowingUp.jsx';
 import Bragging from './Bragging.jsx';
 import PlatformerHolder from './PlatformerHolder.jsx';
 import WhatNext from './WhatNext.jsx';
 import YetiFlashlight from './YetiFlashlight.jsx';
-import SoundClone from './SoundClone.jsx';
+// import SoundClone from './SoundClone.jsx';
+import Projects from './Projects.jsx';
 
 var style = {
     width: '100%',
@@ -26,16 +28,16 @@ class App extends React.Component {
         return (
             <div style={style}>
                 <Navbar />
-                <MyFace />
-                <LikeButton />
-                <Explaining />
                 <Links />
-                <JustFollowingUp />
-                <YetiFlashlight />
-                <SoundClone />
-                <Bragging />
+                <Intro />
                 <PlatformerHolder />
-                <WhatNext />
+                <Projects />
+                <JustFollowingUp />
+              {/* <YetiFlashlight /> */}
+                {/* <SoundClone /> */}
+                {/* <Bragging /> */}
+                {/* <PlatformerHolder /> */}
+                {/* <WhatNext /> */}
             </div>
         );
     }

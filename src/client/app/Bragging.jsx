@@ -1,12 +1,11 @@
-var React = require('react');
+import React, { Component } from 'react'
 
 var style = {
     textDecoration: "none",
     color: '#318784'
 };
 
-var Bragging = React.createClass({
-    render: function(){
+const Bragging = () => {
         return (
             <div>
                 <p>So if your team needs someone who is good with JavaScript, React, and Node, by all means <strong><a style={style} href="tel:8166592363">give me a call.</a></strong></p>
@@ -14,7 +13,6 @@ var Bragging = React.createClass({
                 <p>Ok, how about a little platformer?</p>
             </div>
         );
-    }
-});
+};
 
-module.exports = Bragging;
+export default Bragging;
