@@ -21,7 +21,7 @@ export default function YetiFlashlight () {
           You can check it out <a href="https://play.google.com/store/apps/details?id=com.motomorphosis.user.yetiflashlight" target="_blank">here...</a>
         </p>
       </div>
-      <img style={style} src="https://dl.dropbox.com/s/8e51muj39wsa483/YetiFlashlight.jpg?dl=0" />
+      <img style={style} src="/images/YetiFlashlight.jpg" />
     </div>
   );
 }
