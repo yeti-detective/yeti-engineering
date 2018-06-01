@@ -10,6 +10,12 @@ body {
     text-align: center;
 }
 
+.link {
+  color: #264586;
+  margin: 5%;
+  font-size: 2.5em;
+}
+
 .header-bar {
   background-color: #070A16;
   width: 100%;
