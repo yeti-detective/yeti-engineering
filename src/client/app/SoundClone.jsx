@@ -3,7 +3,9 @@ import React from 'react';
 const SoundClone = props => (
     <div>
         <h2>
-          <a href="https://chris-b-soundclone.herokuapp.com">SoundClone</a>
+          <a href="https://chris-b-soundclone.herokuapp.com" target="_blank">
+            SoundClone
+          </a>
         </h2>
         <a href="https://chris-b-soundclone.herokuapp.com" target="_blank">
           <img
