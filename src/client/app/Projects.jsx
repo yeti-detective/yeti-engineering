@@ -1,8 +1,8 @@
 import React from 'react'
 import JustFollowingUp from './projects/JustFollowingUp.jsx'
 import SoundClone from './projects/SoundClone.jsx'
-import YetiFlashlight from './projects/YetiFlashlight.jsx'
 import Sanik from './projects/Sanik.jsx'
+import YetiFlashlight from './projects/YetiFlashlight.jsx'
 
 const Projects = () => (
   <section className="projects">
@@ -12,6 +12,7 @@ const Projects = () => (
       <SoundClone />
       <Sanik />
       <JustFollowingUp />
+      <YetiFlashlight />
     </div>
   </section>
 )
