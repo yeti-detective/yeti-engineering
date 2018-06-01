@@ -30,7 +30,7 @@ const RubyChess = () => (
       <p>
         While creating this tree structure, it will
         use <a href="https://en.wikipedia.org/wiki/Breadth-first_search"
-        target="_blank">depth-first search</a> to find the shortest branch that
+        target="_blank">breadth-first search</a> to find the shortest branch that
         ends in victory, and then pursue the course of action defined by that
         branch.
       </p>
@@ -40,6 +40,7 @@ const RubyChess = () => (
         space</a> for updates.
       </p>
     </div>
+    <hr />
   </section>
 )
 
