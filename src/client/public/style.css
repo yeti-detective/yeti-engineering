@@ -106,3 +106,25 @@ hr {
 .native-words {
   text-align: left;
 }
+
+.sanik {
+  text-align: justify;
+  padding: 10px;
+}
+
+.sanik-body {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.sanik-screenshot {
+  width: 90%;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.sanik-words {
+  width: 50%;
+}
