@@ -26,7 +26,6 @@
   },
   "homepage": "http://www.motomorphosis-ind.com/",
   "dependencies": {
-    "axios": "^0.15.3",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.1",

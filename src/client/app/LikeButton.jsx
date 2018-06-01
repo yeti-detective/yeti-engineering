@@ -1,6 +1,4 @@
 import React from 'react';
-// import axios from 'axios';
-
 
 var style = {
                 border: 'solid #082156',
