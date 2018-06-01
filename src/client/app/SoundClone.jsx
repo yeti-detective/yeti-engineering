@@ -43,6 +43,7 @@ const SoundClone = props => (
             same view will render for other users who click that link.
           </p>
         </div>
+        <hr />
     </div>
 );
 
