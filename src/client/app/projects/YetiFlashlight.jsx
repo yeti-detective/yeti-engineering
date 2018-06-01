@@ -19,12 +19,12 @@ const YetiFlashlight = () => (
         will come on.
       </p>
       <p>
+        If you've ever faced a similar frustration, allow me to offer my solution.
+      </p>
+      <p>
         The tech stack on this is 100% Android Studio (Java & XML). It was a very
         simple project, but I also used it as an excuse to gain experience in
         publishing an APK to the Google Play store.
-      </p>
-      <p>
-        If you've ever faced a similar frustration, allow me to offer my solution.
       </p>
       <p>
         You can check it
