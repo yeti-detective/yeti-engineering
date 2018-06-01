@@ -1,32 +1,37 @@
 import React from 'react'
 
-export default function YetiFlashlight () {
-  return (
-    <div>
-      <h2>App Development</h2>
-      <div style={{textAlign: 'left', padding: 5}}>
-        <p>
-          What else am I capable of? What am I <strong><em>NOT</em></strong> capable of?!
-        </p>
-        <p>
-          One dark morning, trying to find my socks in the dark with my Android's 3rd party flashlight app, I was annoyed by the ads. On the flashlight.
-        </p>
-        <p>
-          Flashlights do not need ads.
-        </p>
-        <p>
-          So I made my own Android flashlight app. It's not much, but it gave me experience in publishing an APK on the Google Play store.
-        </p>
-        <p>
-          You can check it out <a href="https://play.google.com/store/apps/details?id=com.motomorphosis.user.yetiflashlight" target="_blank">here...</a>
-        </p>
-      </div>
-      <img style={style} src="/images/YetiFlashlight.jpg" />
+const YetiFlashlight = () => (
+  <div className="yeti-flashlight">
+    <h2>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.motomorphosis.user.yetiflashlight"
+        target="_blank"
+        >
+        Yeti Flashlight
+      </a>
+    </h2>
+    <div className="yeti-flashlight-words">
+      <p>
+        I actually just created this app out of frustration. I use an LG Aristo
+        and there is no native flashlight app. All of the flashlight apps I could
+        find on the app store came with ads. The last thing someone who needs
+        a flashlight wants is to wait 15 seconds to skip an ad before the light
+        will come on.
+      </p>
+      <p>
+        If you've ever faced a similar frustration, allow me to offer my solution.
+      </p>
+      <p>
+        You can check it
+        out <a href="https://play.google.com/store/apps/details?id=com.motomorphosis.user.yetiflashlight" target="_blank">here...</a>
+      </p>
     </div>
-  );
-}
+    <img
+      className="yeti-flashlight-screenshot"
+      src="/images/YetiFlashlight.jpg"
+    />
+  </div>
+)
 
-const style = {
-  height: 400,
-  width: 'auto'
-};
+
+export default YetiFlashlight

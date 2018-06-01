@@ -128,3 +128,13 @@ hr {
 .sanik-words {
   width: 50%;
 }
+
+.yeti-flashlight-words {
+  text-align: left;
+  padding: 10px;
+}
+
+yeti-flashlight-screenshot {
+  height: 400px;
+  width: auto;
+}
