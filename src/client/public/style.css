@@ -138,3 +138,14 @@ hr {
   height: 400px;
   width: auto;
 }
+
+.ruby-chess-screenshots a {
+  width: 50%;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.ruby-chess-words {
+  padding: 10px;
+}
