@@ -26,10 +26,14 @@ const YetiFlashlight = () => (
         out <a href="https://play.google.com/store/apps/details?id=com.motomorphosis.user.yetiflashlight" target="_blank">here...</a>
       </p>
     </div>
-    <img
-      className="yeti-flashlight-screenshot"
-      src="/images/YetiFlashlight.jpg"
-    />
+    <a
+      href="https://play.google.com/store/apps/details?id=com.motomorphosis.user.yetiflashlight"
+      target="_blank">
+      <img
+        className="yeti-flashlight-screenshot"
+        src="/images/YetiFlashlight.jpg"
+      />
+      </a>
   </div>
 )
 

@@ -21,7 +21,7 @@ const RubyChess = () => (
     </div>
     <div className="ruby-chess-words">
       <p>
-        This is a pure-ruby project <em>(still in development.)</em> The goal
+        This is a pure-Ruby project <em>(still in development.)</em> The goal
         is to create a computer chess opponent that models a tree data structure
         where the first generation of leaves is each possible move it could
         execute from the current state, the next generation is every possible
@@ -36,7 +36,8 @@ const RubyChess = () => (
       </p>
       <p>
         I hope to gain some insight into AI in the pursuit of this project.
-        Watch this space for updates.
+        Watch <a href="https://github.com/yeti-detective/RubyChess">this
+        space</a> for updates.
       </p>
     </div>
   </section>
