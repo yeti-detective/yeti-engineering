@@ -59,3 +59,7 @@ h2 a {
     text-align: justify;
     box-sizing: border-box;
 }
+
+hr {
+  border-color: #3F5A95;
+}
