@@ -172,6 +172,7 @@ class PlatformerHolder extends React.Component {
             MY SVG IS RESPONSIVE! HA HAHA HA HAHA HA!
           </p>
         </section>
+        <hr />
       </div>
     );
 
