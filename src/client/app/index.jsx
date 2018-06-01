@@ -33,11 +33,11 @@ class App extends React.Component {
                 <PlatformerHolder />
                 <Projects />
                 <JustFollowingUp />
-                <YetiFlashlight />
+              {/* <YetiFlashlight /> */}
                 {/* <SoundClone /> */}
-                <Bragging />
+                {/* <Bragging /> */}
                 {/* <PlatformerHolder /> */}
-                <WhatNext />
+                {/* <WhatNext /> */}
             </div>
         );
     }
