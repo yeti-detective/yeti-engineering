@@ -63,3 +63,27 @@ h2 a {
 hr {
   border-color: #3F5A95;
 }
+
+.just-following-up-container {
+  display: flex;
+}
+
+.jfu-pane {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.jfu-right-pane {
+  width: 50%;
+}
+
+.jfu-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(8, 33, 86, 0.3);
+}
+
+.jfu-left-pane {
+  width: 50%;
+}
