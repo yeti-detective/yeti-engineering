@@ -14,7 +14,7 @@ const YetiFlashlight = () => (
       <p>
         I actually just created this app out of frustration. I use an LG Aristo
         and there is no native flashlight app. All of the flashlight apps I could
-        find on the app store came with ads. The last thing someone who needs
+        find on the Play store came with ads. The last thing someone who needs
         a flashlight wants is to wait 15 seconds to skip an ad before the light
         will come on.
       </p>
