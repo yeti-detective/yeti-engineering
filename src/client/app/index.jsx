@@ -7,6 +7,7 @@ import Bragging from './Bragging.jsx';
 import PlatformerHolder from './PlatformerHolder.jsx';
 import WhatNext from './WhatNext.jsx';
 import Projects from './Projects.jsx';
+import Footer from './Footer.jsx';
 
 
 var style = {
@@ -14,7 +15,6 @@ var style = {
     maxWidth: 1200,
     background: 'linear-gradient(#153162, #071F49)',
     margin: 'auto',
-    padding: 4
 };
 
 class App extends React.Component {
@@ -26,6 +26,7 @@ class App extends React.Component {
                 <Intro />
                 <PlatformerHolder />
                 <Projects />
+                <Footer />
             </div>
         );
     }

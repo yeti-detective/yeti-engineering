@@ -155,3 +155,19 @@ hr {
 .ruby-chess-words {
   padding: 10px;
 }
+
+footer {
+  width: 100%;
+  background: #000;
+}
+
+footer div {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer i.link {
+  font-size: 1em;
+  margin: 10px;
+}
