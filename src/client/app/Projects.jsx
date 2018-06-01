@@ -1,8 +1,8 @@
 import React from 'react'
-import JustFollowingUp from './JustFollowingUp.jsx'
-import SoundClone from './SoundClone.jsx'
-import YetiFlashlight from './YetiFlashlight.jsx'
-import Sanik from './Sanik.jsx'
+import JustFollowingUp from './projects/JustFollowingUp.jsx'
+import SoundClone from './projects/SoundClone.jsx'
+import YetiFlashlight from './projects/YetiFlashlight.jsx'
+import Sanik from './projects/Sanik.jsx'
 
 const Projects = () => (
   <section className="projects">
