@@ -69,7 +69,7 @@ h2 a {
 }
 
 .project-explanation {
-    padding: 0 4px;
+    padding: 0 10px;
     text-align: justify;
     box-sizing: border-box;
 }
@@ -83,7 +83,7 @@ hr {
 }
 
 .jfu-pane {
-  padding: 5px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
