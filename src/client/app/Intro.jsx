@@ -1,11 +1,11 @@
 import React from 'react'
-import MyFace from './PictureOfMe.jsx'
+import LikeButton from './LikeButton.jsx'
 import Explaining from './Explaining.jsx'
 
 
 const Intro = () => (
   <main className="intro">
-    <MyFace />
+    <LikeButton />
     <Explaining />
   </main>
 )
