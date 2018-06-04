@@ -17,8 +17,7 @@ const SoundClone = props => (
         <div className="project-explanation">
           <p>
             SoundClone, inspired by <a href="https://www.soundcloud.com/" target="_blank">
-            SoundCloud</a>, is a full stack app I developed as a student project
-            at <a href="https://appacademy.io" target="_blank">App Academy</a> NYC.
+            SoundCloud</a>, is a full stack app I am developing as a personal project.
           </p>
           <p>
             The backend uses Ruby on Rails to deploy a PostgreSQL database integrated
