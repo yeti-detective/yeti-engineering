@@ -6,7 +6,7 @@ const Links = () => (
       target="_blank">
       <i className="link fab fa-lg fa-codepen"></i>
     </a>
-    <a href="https://www.freecodecamp.com/yeti-detective/front-end-certification"
+    <a href="https://www.freecodecamp.org/certification/yeti-detective/legacy-front-end"
       target="_blank">
       <i className="link fab fa-lg fa-free-code-camp"></i>
     </a>
