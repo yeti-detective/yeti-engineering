@@ -6,12 +6,15 @@ const Explaining = () => (
       <p>I've been working in technology since 2011 when I got my first IT job.</p>
       <p>
         I developed the scripting skills I picked up in IT into a full-blown love of
-        programming and app development after discovering Zed Shaw's book,
-        <em>Learn Python the Hard Way</em>. My first embarassing creation was the
-        dating sim Notice Me Sentai. You can download the latest, still unfinished,
-        build <a href='https://drive.google.com/open?id=0ByJ-Z6PsQ_D1VGlpV2pIME9HQ28'>
+        programming and app development after discovering Zed Shaw's book, <em>Learn
+        Python the Hard Way</em>.
+      </p>
+      <p>
+        My first embarassing creation was a dating sim
+        made in <a href="https://www.renpy.org/" target="_blank">RenPy</a>. You
+        can download the latest, still unfinished, build <a href='https://drive.google.com/open?id=0ByJ-Z6PsQ_D1VGlpV2pIME9HQ28'>
         here</a>. That's a PC build, but I can produce a Mac build also if requested
-         (who would request that?)
+       (who would request that?)
       </p>
       <p>
         My favorite thing about developing for the web is that you can create
