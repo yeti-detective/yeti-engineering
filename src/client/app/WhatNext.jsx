@@ -1,5 +1,5 @@
 import React from 'react';
-import PaypalButton from './PaypalButton.jsx';
+import PaypalButton from './PaypalButton';
 
 var style = {
     textDecoration: "none",

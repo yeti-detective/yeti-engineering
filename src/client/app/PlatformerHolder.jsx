@@ -1,6 +1,6 @@
 var React = require('react');
-var Screen = require('./minigame/Screen.jsx');
-var Controller = require('./minigame/Controller.jsx');
+var Screen = require('./minigame/Screen');
+var Controller = require('./minigame/Controller');
 
 class PlatformerHolder extends React.Component {
   constructor(){

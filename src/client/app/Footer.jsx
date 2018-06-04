@@ -1,5 +1,5 @@
 import React from 'react'
-import Links from './Links.jsx'
+import Links from './Links'
 
 const Footer = () => (
   <footer>

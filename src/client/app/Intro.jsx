@@ -1,6 +1,6 @@
 import React from 'react'
-import LikeButton from './LikeButton.jsx'
-import Explaining from './Explaining.jsx'
+import LikeButton from './LikeButton'
+import Explaining from './Explaining'
 
 
 const Intro = () => (

@@ -1,14 +1,14 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Navbar from './Navbar.jsx';
-import Intro from './Intro.jsx';
-import Links from './Links.jsx';
-import Bragging from './Bragging.jsx';
-import PlatformerHolder from './PlatformerHolder.jsx';
-import WhatNext from './WhatNext.jsx';
-import Projects from './Projects.jsx';
-import AdditionalFacts from './AdditionalFacts.jsx';
-import Footer from './Footer.jsx';
+import Navbar from './Navbar';
+import Intro from './Intro';
+import Links from './Links';
+import Bragging from './Bragging';
+import PlatformerHolder from './PlatformerHolder';
+import WhatNext from './WhatNext';
+import Projects from './Projects';
+import AdditionalFacts from './AdditionalFacts';
+import Footer from './Footer';
 
 
 var style = {

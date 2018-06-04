@@ -1,9 +1,9 @@
 import React from 'react'
-import JustFollowingUp from './projects/JustFollowingUp.jsx'
-import RubyChess from './projects/RubyChess.jsx'
-import SoundClone from './projects/SoundClone.jsx'
-import Sanik from './projects/Sanik.jsx'
-import YetiFlashlight from './projects/YetiFlashlight.jsx'
+import JustFollowingUp from './projects/JustFollowingUp'
+import RubyChess from './projects/RubyChess'
+import SoundClone from './projects/SoundClone'
+import Sanik from './projects/Sanik'
+import YetiFlashlight from './projects/YetiFlashlight'
 
 const Projects = () => (
   <section className="projects">
