@@ -33,15 +33,16 @@
     "express": "^4.14.1",
     "mongod": "^2.0.0",
     "mongodb": "^2.2.31",
-    "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "webpack": "^4.10.2",
-    "webpack-cli": "^2.1.4"
+    "webpack": "^4.10.2"
   },
   "engines": {
     "node": "6.11.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "webpack-cli": "^3.0.2"
+  }
 }
