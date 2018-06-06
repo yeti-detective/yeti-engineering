@@ -5,7 +5,7 @@ const app = express();
 const path = require('path');
 const mongo = require('mongodb').MongoClient
 
-const mongo_pw = require('./mongo_pw.js')
+const mongo_pw = process.env.MPW || require('./mongo_pw.js').password
 
 let db
 let likes
