@@ -51,7 +51,7 @@ app.get('/click', (req, res) => {
     res.json(likes);
 })
 
-mongo.connect(`mongodb://liker:${mongo_pw.password}@ds157278.mlab.com:57278/yetis_first_db`, (err, database) => {
+mongo.connect(`mongodb://liker:${mongo_pw}@ds157278.mlab.com:57278/yetis_first_db`, (err, database) => {
     if (err) throw err
     db = database
     app.listen(port, ()=>{
