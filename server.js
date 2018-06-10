@@ -5,6 +5,8 @@ const app = express();
 const path = require('path');
 const mongo = require('mongodb').MongoClient
 
+const verifyPhone = require('./src/client/app/scripts/verify_phone');
+
 const mongo_pw = process.env.MPW || require('./mongo_pw.js').password
 
 let db
@@ -49,6 +51,10 @@ app.post('/click', (req, res) => {
 
 app.get('/click', (req, res) => {
     res.json(likes);
+})
+
+app.get('/call/:phoneNumber', (req, res) => {
+  req.redirect(`tel:${verifyPhone(req.params.phoneNumber)}`)
 })
 
 mongo.connect(`mongodb://liker:${mongo_pw}@ds157278.mlab.com:57278/yetis_first_db`, (err, database) => {
