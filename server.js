@@ -5,14 +5,14 @@ const app = express();
 const path = require('path');
 const mongo = require('mongodb').MongoClient
 
-const verifyPhone = require('./src/client/app/scripts/verify_phone');
+const validPhone = require(path.join(__dirname + '/src/client/app/scripts/verify_phone'));
 
 const mongo_pw = process.env.MPW || require('./mongo_pw.js').password
 
 let db
 let likes
 let id
-
+debugger
 // serve the app
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/client/index.html'));
@@ -54,7 +54,7 @@ app.get('/click', (req, res) => {
 })
 
 app.get('/call/:phoneNumber', (req, res) => {
-  req.redirect(`tel:${verifyPhone(req.params.phoneNumber)}`)
+  res.redirect(`tel:${validPhone(req.params.phoneNumber)}`)
 })
 
 mongo.connect(`mongodb://liker:${mongo_pw}@ds157278.mlab.com:57278/yetis_first_db`, (err, database) => {
