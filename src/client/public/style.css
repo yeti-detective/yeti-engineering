@@ -10,6 +10,13 @@ body {
     text-align: center;
 }
 
+.app {
+  width: 100%;
+  max-width: 1200;
+  background: linear-gradient(#153162, #071F49);
+  margin: auto;
+}
+
 .link {
   color: #264586;
   margin: 5%;
@@ -193,9 +200,13 @@ hr {
 footer {
   width: 100%;
   background: #000;
+  position: absolute;
+  right: 0;
+  left: 0;
 }
 
 footer div {
+  background: #000;
   width: inherit;
   display: flex;
   justify-content: space-around;
