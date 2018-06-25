@@ -1,19 +1,19 @@
 body {
-    background: linear-gradient(#082156, #15316C);
-    color: #3F5A95;
-    font-family: Tahoma, monospace, sans-serif;
-    margin: 0;
+  background: linear-gradient(#082156, #15316c);
+  color: #3f5a95;
+  font-family: Tahoma, monospace, sans-serif;
+  margin: 0;
 }
 
 #app {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .app {
   width: 100%;
   max-width: 1200;
-  background: linear-gradient(#153162, #071F49);
+  background: linear-gradient(#153162, #071f49);
   margin: auto;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .header-bar {
-  background-color: #070A16;
+  background-color: #070a16;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -35,12 +35,13 @@ body {
   justify-content: space-around;
 }
 
-.header-bar h2, .header-bar h3 {
+.header-bar h2,
+.header-bar h3 {
   margin: auto 0;
 }
 
 .header-bar a {
-  color: #3F5A95;
+  color: #3f5a95;
 }
 
 .grid-daddy {
@@ -85,12 +86,12 @@ a {
 
 .beard-button {
   border: solid 1px #082156;
-  background-color: #070A16;
+  background-color: #070a16;
   border-radius: 10px;
   padding: 5px;
   font-size: 14px;
   color: #318784;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .holder section {
@@ -99,17 +100,17 @@ a {
 }
 
 h2 a {
-  color: #3F5A95;
+  color: #3f5a95;
 }
 
 .project-explanation {
-    padding: 0 10px;
-    text-align: justify;
-    box-sizing: border-box;
+  padding: 0 10px;
+  text-align: justify;
+  box-sizing: border-box;
 }
 
 hr {
-  border-color: #3F5A95;
+  border-color: #3f5a95;
 }
 
 .just-following-up-container {
@@ -126,7 +127,8 @@ hr {
   text-align: right;
 }
 
-.jfu-screenshot, .jfu-native-screenshot {
+.jfu-screenshot,
+.jfu-native-screenshot {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -184,12 +186,36 @@ hr {
   padding: 10px;
 }
 
+.fix-your-city {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.fyc-sections {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fyc-screenshot-holder {
+  width: 50%;
+}
+
+.fyc-words {
+  width: 70%;
+  text-align: left;
+}
+
+.fyc-screenshot {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .additional-facts {
   display: flex;
 }
 
 .about-me {
-  border-right: 1px solid #3F5A95;
+  border-right: 1px solid #3f5a95;
   padding: 10px;
 }
 
