@@ -62,7 +62,7 @@ app.get("/call/:phoneNumber", (req, res) => {
 });
 
 app.get("/payme", (req, res) => {
-  res.sendFile(path.join(__dirname, "payme.html"));
+  res.sendFile(path.join(__dirname, "src", "client", "public", "payme.html"));
 });
 
 mongo.connect(
