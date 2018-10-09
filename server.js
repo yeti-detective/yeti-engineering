@@ -30,14 +30,6 @@ app.get("/style", (req, res) => {
   res.sendFile(path.join(__dirname + "/src/client/public/style.css"));
 });
 
-app.get("/wedding", (req, res) => {
-  res.sendFile(path.join(__dirname + "/src/client/wedding.html"));
-});
-
-app.get("/urlShortner", (req, res) => {
-  res.sendFile(path.join(__dirname + "/src/client/urlShortener.html"));
-});
-
 // serve the script
 app.get("/script", (req, res) => {
   res.sendFile(path.join(__dirname + "/src/client/public/bundle.js"));
