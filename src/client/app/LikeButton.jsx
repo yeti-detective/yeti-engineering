@@ -48,7 +48,7 @@ class LikeButton extends React.Component {
         <img
           className="beard"
           alt="photo of a handsome man"
-          src="/images/HandsomeSmartboy.jpeg"
+          src="/images/FancySmartboy.jpg"
         />
         <br />
         Likes : <span id="likes">{this.state.likesCount}</span>
