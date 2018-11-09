@@ -4,8 +4,8 @@ import Explaining from "./Explaining";
 
 const Intro = () => (
   <main className="intro">
-    <LikeButton />
     <Explaining />
+    <LikeButton />
   </main>
 );
 
