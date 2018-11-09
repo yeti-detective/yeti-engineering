@@ -72,7 +72,7 @@ a {
 }
 
 .explaining {
-  text-align: right;
+  text-align: left;
   margin: auto 0;
   width: 50%;
 }
@@ -92,6 +92,11 @@ a {
   font-size: 14px;
   color: #318784;
   cursor: pointer;
+}
+
+.holder {
+  border-top: solid 1px #5e77ac;
+  padding-top: 14px;
 }
 
 .holder section {
