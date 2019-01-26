@@ -9,6 +9,8 @@ const validPhone = require(path.join(
   __dirname + "/src/client/app/scripts/verify_phone"
 ));
 
+const KILL_THE_HITLERS = "src/client/kth";
+
 const mongo_pw = process.env.MPW || require("./mongo_pw.js").password;
 
 let db;
@@ -55,6 +57,18 @@ app.get("/call/:phoneNumber", (req, res) => {
 
 app.get("/payme", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "client", "public", "payme.html"));
+});
+
+app.get("/kill_the_hitlers", (req, res) => {
+  res.sendFile(path.join(__dirname, KILL_THE_HITLERS, "kill_the_hitlers.html"));
+});
+
+app.get("/kth/style", (req, res) => {
+  res.sendFile(path.join(__dirname, KILL_THE_HITLERS, "kth_style.css"));
+});
+
+app.get("/kth/script", (req, res) => {
+  res.sendFile(path.join(__dirname, KILL_THE_HITLERS, "script.js"));
 });
 
 mongo.connect(
