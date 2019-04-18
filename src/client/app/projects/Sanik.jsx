@@ -44,7 +44,8 @@ const Sanik = () => (
           Pac-Man so I did.{" "}
           <a href="https://github.com/yeti-detective/ry_skim">
             check out the code
-          </a>.
+          </a>
+          .
         </p>
       </section>
     </section>
