@@ -15,9 +15,9 @@ const JustFollowingUp = () => (
       </section>
       <section className="jfu-pane jfu-right-pane">
         <p>
-          Just Following Up is an original creation by Motomorphosis Industries.
-          I have a lot of creative friends who work as freelance artists but
-          have a hard time keeping track of who owes them money.
+          Just Following Up is an original creation by Yeti Engineering. I have
+          a lot of creative friends who work as freelance artists but have a
+          hard time keeping track of who owes them money.
         </p>
         <p>
           This app allows users to authenticate with Facebook, Google or Twitter

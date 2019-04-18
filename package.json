@@ -22,9 +22,9 @@
   "author": "Christopher Brown",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yeti-detective/motomorphosis-industries"
+    "url": "https://github.com/yeti-detective/yeti-engineering"
   },
-  "homepage": "http://www.motomorphosis-ind.com/",
+  "homepage": "www.homepage.com",
   "dependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
