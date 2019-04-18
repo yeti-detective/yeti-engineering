@@ -31,7 +31,7 @@ const Links = () => (
       <i className="link fab fa-lg fa-linkedin-in" />
     </a>
     <a
-      href="mailto:christopher.brown@motomorphosis-ind.com"
+      href="mailto:yeti@yetiengineering.net"
       target="_blank"
       aria-label="email me"
     >
