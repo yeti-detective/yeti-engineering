@@ -3,3 +3,4 @@ node_modules/
 bundle.js*
 mongo_pw.js
 npm-debug.log
+package-lock.json
