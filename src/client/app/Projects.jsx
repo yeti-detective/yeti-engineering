@@ -1,10 +1,10 @@
-import React from 'react';
-import FixYourCity from './projects/FixYourCity';
-import JustFollowingUp from './projects/JustFollowingUp';
-import RubyChess from './projects/RubyChess';
-import SoundClone from './projects/SoundClone';
-import Sanik from './projects/Sanik';
-import YetiFlashlight from './projects/YetiFlashlight';
+import React from "react";
+import FixYourCity from "./projects/FixYourCity";
+import JustFollowingUp from "./projects/JustFollowingUp";
+import RubyChess from "./projects/RubyChess";
+import SoundClone from "./projects/SoundClone";
+import Sanik from "./projects/Sanik";
+import YetiFlashlight from "./projects/YetiFlashlight";
 
 const Projects = () => (
   <section className="projects">

@@ -1,10 +1,10 @@
-import React from 'react'
-import Links from './Links'
+import React from "react";
+import Links from "./Links";
 
 const Footer = () => (
   <footer>
     <Links />
   </footer>
-)
+);
 
-export default Footer
+export default Footer;
