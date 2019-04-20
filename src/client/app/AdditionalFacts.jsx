@@ -17,7 +17,7 @@ const AdditionalFacts = () => (
         .
       </p>
     </div>
-    <div className="motomorphosis-industries">
+    <div className="yeti-engineering">
       <h2>Motomorphosis Industries</h2>
       Motomorphosis is my company. Right now the only thing it sells is me. I
       have plans for it, though. Keep an eye out.
