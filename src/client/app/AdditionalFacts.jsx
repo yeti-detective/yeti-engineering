@@ -18,8 +18,8 @@ const AdditionalFacts = () => (
       </p>
     </div>
     <div className="yeti-engineering">
-      <h2>Motomorphosis Industries</h2>
-      Motomorphosis is my company. Right now the only thing it sells is me. I
+      <h2>Yeti Engineering</h2>
+      Yeti Engineering is my company. Right now the only thing it sells is me. I
       have plans for it, though. Keep an eye out.
     </div>
   </section>
