@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/yeti-detective/yeti-engineering"
   },
-  "homepage": "www.homepage.com",
+  "homepage": "www.yetiengineering.net",
   "dependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
