@@ -3,7 +3,7 @@ let port = process.env.PORT || 8000;
 const express = require("express");
 const app = express();
 const path = require("path");
-const mongo = require("mongodb").MongoClient;
+const sqlite = require("sqlite3").verbose();
 
 const validPhone = require(path.join(
   __dirname + "/src/client/app/scripts/verify_phone"
@@ -11,7 +11,11 @@ const validPhone = require(path.join(
 
 const KILL_THE_HITLERS = "src/client/kth";
 
-const mongo_pw = process.env.MPW || require("./mongo_pw.js").password;
+const db = new sqlite3.Database(':memory', err => {
+  if (!err) {
+    console.log("successfully connected to in-memory db")
+  }
+});
 
 let db;
 let likes;
