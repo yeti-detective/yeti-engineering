@@ -1,7 +1,7 @@
 import React from "react";
 
 const Links = () => (
-  <div>
+  <div className="links">
     <a
       href="https://codepen.io/Yeti_Detective"
       target="_blank"

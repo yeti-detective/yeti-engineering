@@ -55,7 +55,7 @@ class LikeButton extends React.Component {
         <div>
           <button
             className="beard-button"
-            title="likes stored on mongodb instance"
+            title="likes stored on local db instance"
           >
             <i className="fas fa-thumbs-up" />
           </button>

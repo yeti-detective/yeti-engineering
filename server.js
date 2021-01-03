@@ -1,9 +1,9 @@
-let port = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 const express = require("express");
 const app = express();
 const path = require("path");
-const mongo = require("mongodb").MongoClient;
+const sqlite = require("sqlite3").verbose();
 
 const validPhone = require(path.join(
   __dirname + "/src/client/app/scripts/verify_phone"
@@ -11,12 +11,15 @@ const validPhone = require(path.join(
 
 const KILL_THE_HITLERS = "src/client/kth";
 
-const mongo_pw = process.env.MPW || require("./mongo_pw.js").password;
+// const db = new sqlite3.Database('./src/db/likes.db', err => {
+//   if (!err) {
+//     console.log("successfully connected to in-memory db")
+//   } else {
+//     console.log("Error connecting to SQLITE3 Database:", JSON.stringify(err, undefined, 2))
+//   };
+// });
 
-let db;
-let likes;
-let id;
-debugger;
+
 // serve the app
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/src/client/index.html"));
@@ -41,7 +44,7 @@ app.get("/likes", (req, res) => {
   res.json(likes);
 });
 
-// post likes to the hosted database
+// post likes to the in memory database
 app.post("/click", (req, res) => {
   db.collection("likes").save({ _id: 69420247, likes: ++likes });
   res.json(likes);
@@ -71,19 +74,6 @@ app.get("/kth/script", (req, res) => {
   res.sendFile(path.join(__dirname, KILL_THE_HITLERS, "script.js"));
 });
 
-mongo.connect(
-  `mongodb://liker:${mongo_pw}@ds157278.mlab.com:57278/yetis_first_db`,
-  (err, database) => {
-    if (err) throw err;
-    db = database;
-    app.listen(port, () => {
-      console.log("listening on " + port);
-    });
-    db.collection("likes")
-      .find()
-      .toArray((err, result) => {
-        if (err) throw err;
-        likes = result[0]["likes"];
-      });
-  }
-);
+app.listen(port, () => {
+  console.log(`Listening on port: ${port}`)
+});

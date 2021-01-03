@@ -31,17 +31,17 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.0",
     "express": "^4.14.1",
-    "mongod": "^2.0.0",
-    "mongodb": "^2.2.31",
     "path": "^0.12.7",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sqlite3": "^5.0.0",
     "webpack": "^4.10.2"
   },
   "engines": {
-    "node": "6.11.1"
+    "node": "15.5.0"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
     "nodemon": "^1.17.5",
     "webpack-cli": "^3.0.2"
   }
