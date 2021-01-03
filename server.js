@@ -11,13 +11,13 @@ const validPhone = require(path.join(
 
 const KILL_THE_HITLERS = "src/client/kth";
 
-const db = new sqlite3.Database('./src/db/likes.db', err => {
-  if (!err) {
-    console.log("successfully connected to in-memory db")
-  } else {
-    console.log("Error connecting to SQLITE3 Database:", JSON.stringify(err, undefined, 2))
-  };
-});
+// const db = new sqlite3.Database('./src/db/likes.db', err => {
+//   if (!err) {
+//     console.log("successfully connected to in-memory db")
+//   } else {
+//     console.log("Error connecting to SQLITE3 Database:", JSON.stringify(err, undefined, 2))
+//   };
+// });
 
 
 // serve the app
@@ -72,4 +72,8 @@ app.get("/kth/style", (req, res) => {
 
 app.get("/kth/script", (req, res) => {
   res.sendFile(path.join(__dirname, KILL_THE_HITLERS, "script.js"));
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port: ${port}`)
 });

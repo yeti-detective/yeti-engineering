@@ -16,11 +16,10 @@ class App extends React.Component {
       <div className="app">
         <Navbar />
         <Links />
-        <Intro />
-        <PlatformerHolder />
-        <Projects />
-        <AdditionalFacts />
-        <Footer />
+	<h1>
+	  SITE CURRENTLY UNDER CONSTRUCTION
+	</h1>
+	<Footer />
       </div>
     );
   }
